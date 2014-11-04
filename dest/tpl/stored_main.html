@@ -1,0 +1,59 @@
+<div id="scroller">
+	<section class="stored-main" id="scroller-inner" ng-show="StateStoredMain">
+		<div class="stored-info">
+			<div class="stored-info-status">
+				<div class="stored-info-status-inner">
+					<div class="stored-info-status-left">
+						<div class="stored-info-logo"><img ng-src="{{store.logo}}" width="86" height="57"></div>
+						<div class="stored-info-name">
+							<p class="stored-info-name-row1 {{store.shopName | toshopNameFirst | tostoreNameLine:30}}">{{store.shopName | toshopNameFirst | tostoreNameLen:30}}</p>
+							<p class="stored-info-name-row2">{{store.shopName | toshopNameLast}}</p>
+						</div>
+					</div>
+					<div class="stored-info-status-right"></div>
+					<div class="stored-info-status-middle">营业时间：{{store.busiTime}}</div>
+					<div class="stored-info-status-bottom" ng-show="StateStoreRemark">店铺简介：{{store.remark}}</div>
+				</div>
+				<div class="stored-info-status-delivery">
+					<h4>配送方式</h4>
+					<div class="type" ng-repeat="delivery in store.deliveryMethods">
+						<div class="name" ng-if="delivery.deliveryMethodType == 1">零号线配送</div>
+						<div class="name type2" ng-if="delivery.deliveryMethodType == 2">店家配送</div>
+						<div class="content">{{delivery.beginMoney}}元起送/距离{{delivery.deliveryMaxDistance | toFixedItem}}公里/运费{{delivery.deliveryFee}}元</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="stored-anounce" ng-show="StateStoreAnounce">
+			<h4>店铺活动</h4>
+			<div class="stored-anounce-inner">
+				<div class="stored-anounce-content">
+					<p>{{store.promotionInfo}}</p>
+					<p>{{store.shopAnounce}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="stored-comment" ng-show="StateCommentShow">
+			<div class="stored-comment-head">
+				<div class="stored-comment-star-head">★★★★★<span class="star{{store.avgAppPoint | parseIntItem}}">★★★★★</span></div>
+				<div class="stored-comment-num-head">{{comments_len}}条评论</div>
+			</div>
+			<ul class="stored-comment-list">
+				<li ng-repeat="comment in comments">
+					<div class="top">
+						<div class="stored-comment-star">★★★★★<span class="star{{comment.generalScore}}">★★★★★</span></div>
+						<div class="info">{{comment.userName}}<span>{{comment.commentTime}}</span></div>
+						<div class="content">{{comment.appraiseContentShop}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<section class="spin_refresh" ng-show="StateCommentRefresh">
+			<i class="icon-spin animate-spin"></i>
+		</section>
+	</section>
+</div>
+<!-- 刷新 -->
+<section class="spin_refresh" ng-show="StateStoredRefresh">
+	<i class="icon-spin animate-spin"></i>
+</section>

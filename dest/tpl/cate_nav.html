@@ -1,0 +1,34 @@
+<section class="cate-nav">
+	<ul>
+		<li><button ng-click="CateDistanceClick()"><i>{{$root.cateDistanceText}}</i><span class="icon-up02 {{cateDistanceClass}}"></span></button></li>
+		<li><button ng-click="CateCidClick()"><i>{{$root.cateCidText}}</i><span class="icon-up02 {{cateCidClass}}"></span></button></li>
+		<li><button ng-click="CateSortClick()"><i>{{$root.cateSortText}}</i><span class="icon-up02 {{cateSortClass}}"></span></button></li>
+	</ul>
+	<div class="cate-nav-mask" ng-show="CateMask" ng-click="cateInit()"></div>
+	<div class="cate-nav-more">
+		<ul ng-show="CateDistanceList">
+			<li><button ng-click="CateDistanceClick3000()">3.0km内 运费6元</button></li>
+			<li><button ng-click="CateDistanceClick4500()">4.5km内 运费10元</button></li>
+			<li><button ng-click="CateDistanceClick6000()">6.0km内 运费15元</button></li>
+		</ul>
+		<ul ng-show="CateCidList">
+			<li><button ng-click="CateCidClick0()">全部</button></li>
+			<li><button ng-click="CateCidClick1()">中式餐厅</button></li>
+			<li><button ng-click="CateCidClick2()">馄饨面食</button></li>
+			<li><button ng-click="CateCidClick3()">便当套餐</button></li>
+			<li><button ng-click="CateCidClick4()">西式餐点</button></li>
+			<li><button ng-click="CateCidClick5()">日韩料理</button></li>
+			<li><button ng-click="CateCidClick6()">下午茶</button></li>
+			<li><button ng-click="CateCidClick7()">休闲小吃</button></li>
+		</ul>
+		<ul ng-show="CateSortList">
+			<li><button ng-click="CateSortClick0()">默认排序</button></li>
+			<li><button ng-click="CateSortClick1()">距离由近到远</button></li>
+			<li><button ng-click="CateSortClick2()">距离由远到近</button></li>
+			<li><button ng-click="CateSortClick3()">起送价由低到高</button></li>
+			<li><button ng-click="CateSortClick4()">起送价由高到低</button></li>
+			<li><button ng-click="CateSortClick5()">店家配送优先</button></li>
+			<li><button ng-click="CateSortClick6()">零号线配送优先</button></li>
+		</ul>
+	</div>
+</section>

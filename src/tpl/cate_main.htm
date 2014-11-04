@@ -1,0 +1,40 @@
+<div id="scroller">
+	<section class="cate-main" id="scroller-inner">
+		<div class="cate-exist" ng-show="cateListExist">
+			<ul class="shop-list">
+				<li ng-repeat="shop in shopList">
+					<a ng-href="#/store/{{shop.shopId}}">
+						<div class="shop-list-some-left">
+							<img ng-src="{{shop.logo}}" width="86" height="57" />
+							<div class="shop-list-some-img-label{{shop.deliveryMethodType}}"></div>
+						</div>
+						<div class="shop-list-some-right">
+							<h3 class="shop-list-some-title">{{shop.shopName | toshopNameFirst}}</h3>
+							<div class="shop-list-some-desc">{{shop.shopName | toshopNameLast}}</div>
+							<div class="shop-list-some-star">★★★★★<span class="star{{shop.avgAppPoint | parseIntItem}}">★★★★★</span></div>
+							<div class="shop-list-some-bottom">
+								<div class="shop-list-some-bottom-price">起送价:¥{{shop.deliveryBeginMoney}}</div>
+								<div class="shop-list-some-bottom-distance">{{shop.distance | toFixedItem}}km<i>•</i>运费¥{{shop.deliveryFee}}</div>
+							</div>
+							<div class="shop-list-some-state state{{shop.isInBusiness}}">{{shop.isInBusiness | toTransformBusiness}}</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div id="shop-list-pullDown" class="none">下拉准备刷新...</div>
+			<!--<div class="shop-list-more" ng-show="StateCateMore">
+				<button ng-click="getMoreShop()">加载更多数据</button>
+			</div>-->
+			<!-- 刷新 -->
+			<section class="spin_refresh" ng-show="StateCateRefresh">
+				<i class="icon-spin animate-spin"></i>
+			</section>
+		</div>
+	</section>
+</div>
+<div class="cate-empty" ng-show="cateListEmpty">
+	<div>
+		<img src="images/search-empty-bg-2x.png" />
+		<div>c:{{cid}}</div>
+	</div>
+</div>

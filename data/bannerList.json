@@ -1,0 +1,61 @@
+bannerList({
+    "response": {
+        "bannerList": [
+            {
+                "aliveTeype": "1",
+                "marketCircleId": "0",
+                "goneType": "0",
+                "id": "21",
+                "isDeleted": "0",
+                "iosVersion": "0",
+                "cityId": "1",
+                "shopId": "0",
+                "url": "http:\/\/mobile.line0.com\/banner\/nanjing_hongyuecheng.html",
+                "imgUrl": "http:\/\/img.line0.com\/static\/mcms\/1402648962170.png",
+                "title": "虹悦城",
+                "platform": "0",
+                "state": "2",
+                "androidVersion": "0",
+                "startDate": "2014-06-13 16:39:00",
+                "endDate": "2014-07-31 22:00:00"
+            },
+            {
+                "aliveTeype": "1",
+                "marketCircleId": "0",
+                "goneType": "0",
+                "id": "20",
+                "isDeleted": "0",
+                "iosVersion": "0",
+                "cityId": "1",
+                "shopId": "0",
+                "url": "http:\/\/mobile.line0.com\/banner\/nanjing_longxia.html",
+                "imgUrl": "http:\/\/img.line0.com\/static\/mcms\/1402648735551.jpg",
+                "title": "红叶龙虾",
+                "platform": "0",
+                "state": "2",
+                "androidVersion": "0",
+                "startDate": "2014-06-13 16:38:00",
+                "endDate": "2014-07-31 22:00:00"
+            },
+            {
+                "aliveTeype": "1",
+                "marketCircleId": "0",
+                "goneType": "0",
+                "id": "12",
+                "isDeleted": "0",
+                "iosVersion": "0",
+                "cityId": "1",
+                "shopId": "0",
+                "url": "http:\/\/v.youku.com\/v_show\/id_XNzIyMDAyMDc2.html ",
+                "imgUrl": "http:\/\/img.line0.com\/static\/mcms\/1402495386429.jpg",
+                "title": "嗑虾子视频",
+                "platform": "0",
+                "state": "2",
+                "androidVersion": "0",
+                "startDate": "2014-06-11 21:59:00",
+                "endDate": "2014-07-31 22:00:00"
+            }
+        ],
+        "errorCode": 1
+    }
+})

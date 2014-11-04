@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+$search-text-height : 60px / 2;
+$search-text-background-size : 30px / 2;
+$search-top-margin : ($nav-top - $search-text-height) / 2;
+
+.search-top {
+	@extend %clearfix;
+
+	.search-top-left {
+		float: left;
+		width: 82%;
+	}
+	.search-top-right {
+		float: right;
+		width: 18%;
+	}
+	.search-top-left-inner {
+		padding: $search-top-margin;
+		padding-left: 45px;
+	}
+	#search-text {
+		@include box-sizing(border-box);
+		padding-left: $search-top-margin * 2 + $search-text-background-size;
+		padding-right: $search-top-margin;
+		width: 100%;
+		height: $search-text-height;
+		border: none;
+		background-color: #FFF;
+		background-position: $search-top-margin center;
+		background-repeat: no-repeat;
+		@include retinize(search-top-text-bg, png, $search-text-background-size, $search-text-background-size);
+		font-size: 14px;
+		color: #333;
+	}
+	#search-submit {
+		@include box-sizing(border-box);
+		display: block;
+		width: 100%;
+		height: $nav-top;
+		line-height: $nav-top;
+		text-align: center;
+		border: 0;
+		background-color: transparent;
+		font-size: 16px;
+		color: #FFF;
+	}
+}
+.index .nav-top-back {
+	display: none !important;
+}
+.index .search-top-left-inner {
+	padding-left: 7px;
+}
+
+.search-main,
+.cate-main {
+	overflow: hidden;
+}
+.search-empty,
+.cate-empty {
+	z-index: 3;
+	position: absolute;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #FFF;
+	text-align: center;
+	> div {
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		font-size: 16px;
+		color: #999;
+		p {
+			margin-top: 20px;
+		}
+	}
+}

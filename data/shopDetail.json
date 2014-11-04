@@ -1,0 +1,397 @@
+getStore({
+    "response": {
+        "errorCode": 1,
+        "shopProdTypeList": [
+            {
+                "categoryCode": "ull",
+                "typeId": "20904",
+                "showOrder": "1",
+                "isDeleted": "0",
+                "typeName": "炸鸡",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20905",
+                "showOrder": "2",
+                "isDeleted": "0",
+                "typeName": "汉堡",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20906",
+                "showOrder": "3",
+                "isDeleted": "0",
+                "typeName": "麦饼",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20907",
+                "showOrder": "4",
+                "isDeleted": "0",
+                "typeName": "小食",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20908",
+                "showOrder": "5",
+                "isDeleted": "0",
+                "typeName": "配餐",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20909",
+                "showOrder": "6",
+                "isDeleted": "0",
+                "typeName": "三明治",
+                "shopId": "1467"
+            },
+            {
+                "categoryCode": "ull",
+                "typeId": "20910",
+                "showOrder": "7",
+                "isDeleted": "0",
+                "typeName": "鲜榨果汁系列",
+                "shopId": "1467"
+            }
+        ],
+        "shop": {
+            "saleAmount": "2164",
+            "promotionInfo": "",
+            "avgAppPoint": "5",
+            "pointX": "118.786321",
+            "logoUrl": "http:\/\/img.line0.com\/static\/\/image\/logo\/1398819885748.jpg",
+            "pointY": "32.054058",
+            "shopAnounce": "",
+            "commentsAmount": "14",
+            "merchantId": "0",
+            "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/1398819885748.jpg",
+            "flag": 30,
+            "shopType": "0",
+            "salesInWeek": 181,
+            "favourite": "null",
+            "cutPost": 6,
+            "avgSales": 0,
+            "isShow": "1",
+            "isCollected": 0,
+            "avgCost": "20.00",
+            "collectedNum": "13",
+            "freePost": 0,
+            "shopName": "美满家美满家美满家美满家美满家美满家美满家美满家(金中店)",
+            "isAnounceShow": "0",
+            "promotionMark": "0",
+            "deliveryMaxDistance": 6000,
+            "deliveryTime": 60,
+            "deliveryMethodType": 1,
+            "isInBusiness": "1",
+            "deliveryPhone": "4001141890",
+            "address": "华侨路豆菜桥23号",
+            "preparedTime": "15",
+            "busiTimeBin": "000000000000000000001111111111111111111000000000",
+            "systemShopType": [
+                {
+                    "level": "2",
+                    "showOrder": "1",
+                    "shopTypeName": "西式快餐",
+                    "shopTypeShowName": "西式快餐",
+                    "systemShopTypeId": "7",
+                    "isDeleted": "0",
+                    "typeCode": "002001",
+                    "parentId": "2"
+                },
+                {
+                    
+                }
+            ],
+            "deliveryFee": "6",
+            "shopTel": "84713141\/13814020530",
+            "deliveryBeginMoney": "20",
+            "mainBusiness": "1",
+            "remark": "  ",
+            "distance": "1025.6",
+            "shopId": 1467,
+            "busiArea": "null",
+            "deliveryMethods": [
+                {
+                    "deliveryMaxDistance": "6000",
+                    "deliveryFee": "6",
+                    "deliveryMethodType": 1,
+                    "beginMoney": "20",
+                    "deliveryPhone": "4001141890",
+                    "deliveryMethodId": "1"
+                }
+            ],
+            "shopStatus": 1,
+            "shortMsg": "",
+            "busiTime": "10:00-19:30",
+            "deliveryMethodId": "1",
+            "promotionTitle": "",
+            "marketCircleId": "131"
+        },
+        "tuijianProdList": [
+            {
+                "collectedNum": "1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/image\/1467\/FLKAD0016.jpg",
+                "sales": "13",
+                "productDesc": "麦香鸡肉汉堡 4.5元\/份 ，11元3只",
+                "shopProdTypeId": "20905",
+                "isDeleted": "0",
+                "sysProdTypeId": "1108",
+                "attrList": [
+                    {
+                        "price": "4.50",
+                        "dictOne": {
+                            "dictId": "2261",
+                            "dictName": "规格",
+                            "dictValue": "1只"
+                        },
+                        "productId": "240619",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": 0,
+                        "integral": "5",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984830",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "99999"
+                    },
+                    {
+                        "price": "11.00",
+                        "dictOne": {
+                            "dictId": "2108",
+                            "dictName": "规格",
+                            "dictValue": "3只"
+                        },
+                        "productId": "240619",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": 0,
+                        "integral": "11",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984831",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "0"
+                    }
+                ],
+                "productCode": "BDA06AA",
+                "productName": "麦香鸡肉汉堡",
+                "shopId": "1467",
+                "priceDown": 4.5,
+                "priceRange": "4.5-11",
+                "state": "3",
+                "productId": "240619",
+                "priceDownAttr": {
+                    "price": "4.50",
+                    "dictOne": {
+                        "dictId": "2261",
+                        "dictName": "规格",
+                        "dictValue": "1只"
+                    },
+                    "productId": "240619",
+                    "packCost": "0.00",
+                    "promotionStartDate": null,
+                    "inPrice": 0,
+                    "integral": "5",
+                    "extIsCuxiao": 0,
+                    "promotionPrice": 3,
+                    "productAttrId": "984830",
+                    "promotionEndDate": null,
+                    "dictTwo": null,
+                    "stock": "0"
+                },
+                "article": ""
+            },
+            {
+                "collectedNum": 0,
+                "imageUrl": "http:\/\/img.line0.com\/static\/image\/1467\/FLKAD0013.jpg",
+                "sales": "30",
+                "productDesc": "假日汉堡 8元\/份",
+                "shopProdTypeId": "20905",
+                "isDeleted": "0",
+                "sysProdTypeId": "1108",
+                "attrList": [
+                    {
+                        "price": "8.00",
+                        "dictOne": null,
+                        "productId": "240616",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": 0,
+                        "integral": "8",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984819",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "99999"
+                    }
+                ],
+                "productCode": "000ullBJV5RCCB5JDN",
+                "productName": "假日汉堡假日汉堡假日汉堡假日汉堡假日汉堡假日汉堡",
+                "shopId": "1467",
+                "priceDown": 8,
+                "priceRange": 8,
+                "state": "3",
+                "productId": "240616",
+                "priceDownAttr": {
+                    "price": "8.00",
+                    "dictOne": null,
+                    "productId": "240616",
+                    "packCost": "0.00",
+                    "promotionStartDate": null,
+                    "inPrice": 0,
+                    "integral": "8",
+                    "extIsCuxiao": 0,
+                    "promotionPrice": 0,
+                    "productAttrId": "984819",
+                    "promotionEndDate": null,
+                    "dictTwo": null,
+                    "stock": "99999"
+                },
+                "article": ""
+            },
+            {
+                "collectedNum": 0,
+                "imageUrl": "http:\/\/img.line0.com\/static\/image\/1467\/FLKAD0015.jpg",
+                "sales": "18",
+                "productDesc": "培根汉堡 单层6.5元\/份，双层8元\/份",
+                "shopProdTypeId": "20905",
+                "isDeleted": "0",
+                "sysProdTypeId": "1108",
+                "attrList": [
+                    {
+                        "price": "6.50",
+                        "dictOne": {
+                            "dictId": "15803",
+                            "dictName": "规格",
+                            "dictValue": "单层"
+                        },
+                        "productId": "240618",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": 0,
+                        "integral": "6",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984826",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "99999"
+                    },
+                    {
+                        "price": "8.00",
+                        "dictOne": {
+                            "dictId": "15689",
+                            "dictName": "规格",
+                            "dictValue": "双层"
+                        },
+                        "productId": "240618",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": 0,
+                        "integral": "8",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984827",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "99999"
+                    }
+                ],
+                "productCode": "BDA05AA",
+                "productName": "培根汉堡",
+                "shopId": "1467",
+                "priceDown": 6.5,
+                "priceRange": "6.5-8",
+                "state": "3",
+                "productId": "240618",
+                "priceDownAttr": {
+                    "price": "6.50",
+                    "dictOne": {
+                        "dictId": "15803",
+                        "dictName": "规格",
+                        "dictValue": "单层"
+                    },
+                    "productId": "240618",
+                    "packCost": "0.00",
+                    "promotionStartDate": null,
+                    "inPrice": 0,
+                    "integral": "6",
+                    "extIsCuxiao": 0,
+                    "promotionPrice": 0,
+                    "productAttrId": "984826",
+                    "promotionEndDate": null,
+                    "dictTwo": null,
+                    "stock": "99999"
+                },
+                "article": ""
+            },
+            {
+                "collectedNum": 0,
+                "imageUrl": "http:\/\/img.line0.com\/static\/image\/1467\/FLKAD0001.jpg",
+                "sales": "66",
+                "productDesc": "香辣鸡中翅 5元\/对",
+                "shopProdTypeId": "20904",
+                "isDeleted": "0",
+                "sysProdTypeId": "1108",
+                "attrList": [
+                    {
+                        "price": "5.00",
+                        "dictOne": {
+                            "dictId": "15949",
+                            "dictName": "规格",
+                            "dictValue": "一对"
+                        },
+                        "productId": "240607",
+                        "packCost": "0.00",
+                        "promotionStartDate": null,
+                        "inPrice": "0.00",
+                        "integral": "5",
+                        "extIsCuxiao": 0,
+                        "promotionPrice": 0,
+                        "productAttrId": "984795",
+                        "promotionEndDate": null,
+                        "dictTwo": null,
+                        "stock": "99999"
+                    }
+                ],
+                "productCode": "000ullTOC38X57SSP8",
+                "productName": "香辣鸡中翅",
+                "shopId": "1467",
+                "priceDown": 5,
+                "priceRange": 5,
+                "state": "3",
+                "productId": "240607",
+                "priceDownAttr": {
+                    "price": "5.00",
+                    "dictOne": {
+                        "dictId": "15949",
+                        "dictName": "规格",
+                        "dictValue": "一对"
+                    },
+                    "productId": "240607",
+                    "packCost": "0.00",
+                    "promotionStartDate": null,
+                    "inPrice": "0.00",
+                    "integral": "5",
+                    "extIsCuxiao": 0,
+                    "promotionPrice": 0,
+                    "productAttrId": "984795",
+                    "promotionEndDate": null,
+                    "dictTwo": null,
+                    "stock": "99999"
+                },
+                "article": ""
+            }
+        ],
+        "msg": " "
+    }
+})

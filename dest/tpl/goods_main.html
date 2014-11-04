@@ -1,0 +1,62 @@
+<div id="scroller">
+	<section class="goods-main" id="scroller-inner" ng-show="StateGoodsMain">
+		<div class="goods-tab">
+			<div class="goods-info">
+				<div class="goods-img"><img ng-src="{{goods.imageUrl}}"></div>
+				<div class="goods-tit">{{goods.productName}}</div>
+				<div class="goods-price"><span>¥{{goods.priceDown}}</span><i>打包费{{goods.priceDownAttr.packCost}}元</i></div>
+				<div class="goods-other">
+					<div class="ta_l">月销量<b>{{goods.sales}}</b>件</div>
+					<div class="ta_c">库存<b>{{goods.priceDownAttr.stock}}</b>件</div>
+					<div class="ta_r">收藏<b>{{goods.collectedNum}}</b>次</div>
+				</div>
+			</div>
+			<div class="goods-store">
+					<div class="title">{{goods.shop.shopName}}</div>
+					<div class="body">
+						<ul>
+							<li><div>总销量</div>{{goods.shop.saleAmount}}</li>
+							<li><div>好评</div>{{goods.shop.commentsAmount}}</li>
+							<li><div>关注人数</div>{{goods.shop.collectedNum}}</li>
+						</ul>
+						<div class="stored-info-status-delivery">
+							<div class="type" ng-repeat="delivery in goods.shop.deliveryMethods">
+								<div class="name" ng-if="delivery.deliveryMethodType == 1">零号线配送</div>
+								<div class="name type2" ng-if="delivery.deliveryMethodType == 2">店家配送</div>
+								<div class="content">{{delivery.beginMoney}}元起送/距离{{delivery.deliveryMaxDistance | toFixedItem}}公里/运费{{delivery.deliveryFee}}元</div>
+							</div>
+						</div>
+				</div>
+				<div class="link"><a href="#/store/{{goods.shop.shopId}}">进入店铺</a></div>
+			</div>
+		</div>
+		<div class="goods-tab">
+			<div class="goods-coment" ng-show="StateGoodsCommentMain">
+				<div>总评论<span>({{totalRows}})</span></div>
+				<ul>
+					<li ng-repeat="comment in comments">
+						<div class="top"><span class="f_l">{{comment.userNickname}}</span><span class="f_r">{{comment.commentsTime}}</span></div>
+						<div class="bottom">{{comment.commentsContent}}</div>
+					</li>
+				</ul>
+			</div>
+			<div class="goods-coment-null" ng-show="StateGoodsCommentNull">{{comments.msg}}</div>
+			<!-- 刷新 -->
+			<section class="spin_refresh" ng-show="StateGoodsCommentRefresh">
+				<i class="icon-spin animate-spin"></i>
+			</section>
+		</div>
+		<div class="goods-tab">
+			<img ng-repeat="img in productImage" ng-src="{{img}}">
+		</div>
+	</section>
+	<section class="store-cart-mask"></section>
+	<section class="store-cart">
+		<div class="store-cart-right"><a ng-href="http://www.line0.com/line0Moblie/toPageMobileD.do?eventType=3">进入购物车</a></div>
+	</section>
+</div>
+
+<!-- 刷新 -->
+<section class="spin_refresh" ng-show="StateGoodsRefresh">
+	<i class="icon-spin animate-spin"></i>
+</section>

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// support_browser
+$support-ie: true !default;
+$support-ie6: $support-ie !default;
+$support-ie7: $support-ie !default;
+$support-ie8: $support-ie !default;
+$support-ie: $support-ie6 or $support-ie7 or $support-ie8;
+$support-microsoft: true !default;
+$support-mozilla: true;
+$support-webkit: true !default;
+$support-opera: true !default;
+
+// support_other
+$support-svg: false !default;
+$support-pie: false !default;

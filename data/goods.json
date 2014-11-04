@@ -1,0 +1,135 @@
+getGoods({
+    "response": {
+        "msg": "",
+        "product": {
+            "collectedNum": 0,
+            "imageUrl": "http://img6.line0.com/static/guanjiapro/1413559722584.jpg",
+            "sales": "3",
+            "productDesc": "",
+            "shopProdTypeId": "27228",
+            "priceDownAttr": {
+                "price": "7.00",
+                "dictOne": null,
+                "stock": "999999",
+                "dictTwo": {
+                    "dictId": "2422",
+                    "dictValue": "原味",
+                    "dictName": "风味"
+                },
+                "promotionStartDate": null,
+                "productId": "371967",
+                "promotionEndDate": null,
+                "extIsCuxiao": 0,
+                "productAttrId": "1317696",
+                "promotionPrice": 0,
+                "integral": 0,
+                "inPrice": 0,
+                "packCost": "0.00"
+            },
+            "sysProdTypeId": "0",
+            "attrList": [
+                {
+                    "price": "7.00",
+                    "dictOne": null,
+                    "stock": "999999",
+                    "dictTwo": {
+                        "dictId": "2422",
+                        "dictValue": "原味",
+                        "dictName": "风味"
+                    },
+                    "promotionStartDate": null,
+                    "productId": "371967",
+                    "promotionEndDate": null,
+                    "extIsCuxiao": 0,
+                    "productAttrId": "1317696",
+                    "promotionPrice": 0,
+                    "integral": 0,
+                    "inPrice": 0,
+                    "packCost": "0.00"
+                }
+            ],
+            "productCode": "000ull8YAGWZMTKJPH",
+            "productName": "原味鸡蛋仔",
+            "shopId": "2346",
+            "shop": {
+                "saleAmount": "1934",
+                "promotionInfo": "",
+                "avgAppPoint": "4.9412",
+                "pointX": "118.793924",
+                "logoUrl": "http://img.line0.com/static//image/logo/1405477221902.jpg",
+                "pointY": "32.025394",
+                "shopAnounce": "",
+                "commentsAmount": "34",
+                "merchantId": "0",
+                "logo": "http://img.line0.com/static//image/logo/1405477221902.jpg",
+                "flag": 26,
+                "shopType": "0",
+                "shortMsg": "潼关小吃 传承经典",
+                "favourite": "null",
+                "cutPost": 6,
+                "avgSales": 0,
+                "isShow": "1",
+                "systemShopType": [
+                    {
+                        "level": "2",
+                        "showOrder": "1",
+                        "shopTypeName": "馄饨面食",
+                        "shopTypeShowName": "馄饨面食",
+                        "systemShopTypeId": "5",
+                        "isDeleted": "0",
+                        "typeCode": "001001",
+                        "parentId": "1"
+                    },
+                    {}
+                ],
+                "avgCost": "15.00",
+                "collectedNum": "21",
+                "deliveryMethods": [
+                    {
+                        "deliveryMaxDistance": "6000",
+                        "deliveryFee": "6",
+                        "deliveryMethodType": 1,
+                        "beginMoney": "25",
+                        "deliveryPhone": "4001141890",
+                        "deliveryMethodId": "1"
+                    }
+                ],
+                "deliveryFee": "6",
+                "deliveryPhone": "4001141890",
+                "isAnounceShow": "0",
+                "deliveryMaxDistance": 6000,
+                "deliveryMethodId": "1",
+                "freePost": 0,
+                "isInBusiness": "1",
+                "deliveryMethodType": 1,
+                "promotionMark": "0",
+                "salesInWeek": 134,
+                "marketCircleId": "132",
+                "busiArea": "null",
+                "busiTimeBin": "000000000000000000001111111111111111111111000000",
+                "distance": "1572.8",
+                "deliveryBeginMoney": "25",
+                "mainBusiness": "1",
+                "remark": "潼关肉夹馍--皮薄松脆，掉渣烫口，肉质细腻，肥而不腻，瘦而不柴，咸香可口，口味深长…被确定为陕西省非物质文化遗产，欢迎订餐品尝！！",
+                "shopTel": "13915946935/13057509905",
+                "shopId": 2346,
+                "preparedTime": "15",
+                "address": "南京市瞻园路苏果超市",
+                "shopStatus": 1,
+                "deliveryTime": 60,
+                "busiTime": "10:00-21:00",
+                "shopName": "潼关肉夹馍(夫子庙店)",
+                "promotionTitle": "",
+                "isCollected": 0
+            },
+            "isDeleted": "0",
+            "priceDown": 7,
+            "priceRange": 7,
+            "state": "3",
+            "article": "",
+            "isVirtual": "0",
+            "productId": "371967"
+        },
+        "errorCode": 1
+    }
+})

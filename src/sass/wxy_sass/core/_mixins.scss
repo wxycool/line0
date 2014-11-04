@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+@import '_mixins_reset.scss';
+@import '_mixins_css3.scss';
+
+// alert
+@mixin alert_size($padding:$padding-base-horizontal, $border-radius:$border-radius-base) {
+	padding: $padding;
+	border: 1px solid;
+	border-radius: $border-radius;
+}
+@mixin alert($border-color, $bg-color, $color) {
+	@include alert_size();
+	border-color: $border-color;
+	background: $bg-color;
+	color: $color;
+	.alert-link {
+		color: darken($color, 10%);
+	}
+}
+
+// responsive
+//	@include responsive(screen-phone) {
+//		width: 80%;
+//	};
+@mixin responsive($width) {
+	@if $width == screen-iphone {
+		@media only screen and (device-width: 320px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+	@else if $width == screen-iphone4 {
+		@media only screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+	@else if $width == screen-iphone5 {
+		@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+	@else if $width == screen-android_w480 {
+		@media only screen and (device-width: 320px) and (-webkit-device-pixel-ratio: 1.5) { @content }
+	}
+	@else if $width == screen-android_w720 {
+		@media only screen and (min-device-width: 360px) and (max-device-width: 400px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+	@else if $width == screen-android_w1080 {
+		@media only screen and (device-width: 540px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+	@else if $width == screen-ipad {
+		@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) { @content }
+	}
+	@else if $width == screen-iPadMini {
+		@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) and (-webkit-device-pixel-ratio: 1) { @content }
+	}
+	@else if $width == screen-iPad {
+		@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) and (-webkit-device-pixel-ratio: 2) { @content }
+	}
+}
+
+@mixin retinize($file, $type, $width, $height) {
+	background-image: url('../images/' + $file + '.' + $type);
+	@media #{$screen-hidpi} {
+						& {
+							background-image: url('../images/' + $file + '-2x.' + $type);
+							@include background-size($width, $height);
+						}
+					}
+}
+
+@mixin img-responsive($display: block) {
+	display: $display;
+	max-width: 100%;
+	height: auto;
+}
+
+// imgLoad
+@mixin imgLoad($image: $img-load-src) {
+	display: inline;
+	width: 0px;
+	height: 0px;
+	background-image: url($image);
+}

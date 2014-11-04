@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// reset-placholder
+@mixin reset-placholder($color: $input-placeholder-color) {
+	::-webkit-input-placeholder { color: $color; }
+	:-moz-placeholder { color: $color; }
+	::-moz-placeholder { color: $color; }
+	:-ms-input-placeholder { color: $color; }
+}
+
+// center-box
+@mixin center-box {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// size
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+@mixin square($size) {
+	@include size($size, $size);
+}
+
+// text-overflow
+@mixin text-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// hide-text
+@mixin text-hide() {
+	font: 0 a;
+	color: transparent;
+	text-shadow: none;
+}
+
+// tab-focus
+@mixin tab-focus() {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+// pixels to rems
+@function pxToRem($px) {
+	@return $px / $px-base * 1rem;
+}
+
+// 平分列
+@function calculate-width ($col-span) {
+	@return 100% / $col-span;
+}
+
+// 白色透明度
+@function black($opacity){
+	@return rgba(0, 0, 0, $opacity);
+}
+
+// 黑色透明度
+@function white($opacity){
+	@return rgba(255, 255, 255, $opacity);
+}

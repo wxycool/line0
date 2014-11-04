@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.alert-success {
+	@include alert($state-success-border, $state-success-bg, $state-success-text);
+}
+.alert-info {
+	@include alert($state-info-border, $state-info-bg, $state-info-text);
+}
+.alert-warning {
+	@include alert($state-warning-border, $state-warning-bg, $state-warning-text);
+}
+.alert-danger {
+	@include alert($state-danger-border, $state-danger-bg, $state-danger-text);
+}

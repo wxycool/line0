@@ -1,0 +1,49 @@
+<section class="store-main" ng-show="StateStoreMain">
+	<div class="store-notice" ng-show="StateNotice">
+		<div>{{store.promotionInfo}}</div>
+		<i ng-click="hideNotice()"></i>
+	</div>
+	<div class="scroller">
+		<div id="scroller-left" class="">
+			<div id="scroller-left-inner">
+				<ul class="store-cate">
+					<li store_cate ng-repeat="cate in cate" class=""><button>{{cate.typeName}}</button></li>
+				</ul>
+			</div>
+		</div>
+		<div id="scroller-right" class="">
+			<div id="scroller-right-inner" class="scroller-right-inner">
+				<ul class="store-some" ng-repeat="cate in cate">
+					<li ng-repeat="prod in prod" ng-if="prod.shopProdTypeId == cate.typeId">
+						<div class="left">
+							<div class="name {{prod.productName | tostoreNameLine:24}}"><a href="#/goods/{{prod.productId}}">{{prod.productName | tostoreNameLen:24}}</a></div>
+							<div ng-if="prod.priceDownAttr.promotionPrice != 0"><span class="price">¥{{prod.priceDownAttr.promotionPrice}}</span><span class="price_o">¥{{prod.priceDown}}</span></div>
+							<div ng-if="prod.priceDownAttr.promotionPrice == 0"><span class="price">¥{{prod.priceDown}}</span></div>
+							<div class="sale">月销{{prod.sales}}份</div>
+						</div>
+						<div class="right">
+							<div class="stock_y" ng-if="prod.priceDownAttr.stock != 0">
+							<div class="stock_cart" stock_cart_click></div>
+							<div class="stock_select">
+								<span class="select-sub" select_sub></span>
+								<input class="select-val" disabled="disabled" type="text" ng-model="prod.buyNum">
+								<span class="select-add" select_add></span>
+							</div>
+						</div>
+							<div class="stock_n" ng-if="prod.priceDownAttr.stock == 0">售罄</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="store-cart-mask"></section>
+	<section class="store-cart">
+		<div class="store-cart-left"><div class="store-carr-price">¥<span>{{bill.totalCart}}</span></div><!--<div class="store-carr-original">0.0</div>--></div>
+		<div class="store-cart-right"><a ng-href="http://www.line0.com/line0Moblie/toPageMobileD.do?eventType=3">选好了</a></div>
+	</section>
+</section>
+<!-- 刷新 -->
+<section class="spin_refresh" ng-show="StateStoreRefresh">
+	<i class="icon-spin animate-spin"></i>
+</section>

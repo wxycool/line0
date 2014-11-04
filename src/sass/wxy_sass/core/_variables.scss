@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+@import '_variables_support.scss';
+
+// html
+$px-base:	20px !default;
+$body-bg:	#FFF !default;
+
+// line-height
+$line-height-base:		1.428571429 !default; // 20/14
+$line-height-small:		1.2 !default;
+$line-height-large:		2 !default;
+
+// font
+$font-family-sans-serif:	"Helvetica Neue", Helvetica, Arial, STHeiTi, sans-serif !default;
+$font-family-serif:				Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:		Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-chinese:			'Microsoft YaHei', Helvetica, Tahoma, Arial, sans-serif !default;
+$font-family-base:				$font-family-chinese;
+$font-size-base:						14px !default;
+$font-size-small:					ceil(($font-size-base * 0.85)) !default;// ~12px
+$font-size-large:					ceil(($font-size-base * 1.25)) !default;// ~18px
+$font-size-h1:							floor(($font-size-base * 2.6)) !default;// ~36px
+$font-size-h2:							floor(($font-size-base * 2.15)) !default;// ~30px
+$font-size-h3:							ceil(($font-size-base * 1.7)) !default;// ~24px
+$font-size-h4:							ceil(($font-size-base * 1.25)) !default;// ~18px
+$font-size-h5:							$font-size-base !default;
+$font-size-h6:							ceil(($font-size-base * 0.85)) !default;// ~12px
+
+// color
+$color-gray-darker:		lighten(#000, 13.5%) !default;	// #222
+$color-gray-dark:			lighten(#000, 20%) !default;		// #333
+$color-gray:						lighten(#000, 33.5%) !default;	// #555
+$color-gray-light:		lighten(#000, 60%) !default;		// #999
+$color-gray-lighter:	lighten(#000, 93.5%) !default;	// #eee
+$color-primary:				#428BCA !default;
+$color-success:				#5CB85C !default;
+$color-info:						#5BC0DE !default;
+$color-warning:				#F0AD4E !default;
+$color-danger:					#D9534F !default;
+$color-light:					#FFF !default;
+$color-darken:					#000 !default;
+$color-body:						#333 !default;
+$color-link:						darken($color-body, 10%) !default;
+$color-link-hover:		darken($color-primary, 15%) !default;
+
+// padding
+$padding-base-vertical:			6px !default;
+$padding-base-horizontal:	12px !default;
+$padding-large-vertical:		10px !default;
+$padding-large-horizontal:	16px !default;
+$padding-small-vertical:		5px !default;
+$padding-small-horizontal:	10px !default;
+$padding-xs-vertical:				1px !default;
+$padding-xs-horizontal:			5px !default;
+
+// border
+$border-radius-base:		4px !default;
+$border-radius-large:		6px !default;
+$border-radius-small: 	3px !default;
+
+// opacity
+$opacity-base:			50 !default;
+$opacity-small:		$opacity-base - 30 !default;
+$opacity-large:		$opacity-base + 30 !default;
+
+// z-index
+$zindex-modal:											220 !default;
+$zindex-modal-mask:								210 !default;
+
+// table
+$table-cell-padding:				8px !default;
+$table-cell-padding-small:	5px !default;
+$table-cell-padding-large:	10px !default;
+$table-border-color:				#DCDCDC !default;
+$table-bg:										transparent !default;
+$table-bg-accent:						#F9F9F9 !default;
+$table-bg-hover:							#F5F5F5 !default;
+$table-bg-active:						$table-bg-hover !default;
+
+// form
+$input-height-base:					$font-size-base * $line-height-base;
+$input-border:								#CCC !default;
+$input-border-focus:				#66afe9 !default;
+$input-border-radius:				$border-radius-base !default;
+$input-bg:										#FFF !default;
+$input-bg-disabled:					$color-gray-lighter !default;
+$input-color:								$color-body !default;
+$input-placeholder-color:	#979AA0 !default;
+
+// btn
+$btn-font-weight:						normal !default;
+$btn-default-bg:							#FFF !default;
+$btn-default-border:				#CCC !default;
+$btn-default-color:					#333 !default;
+$btn-primary-bg:							$color-primary !default;
+$btn-primary-border:				darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:					#FFF !default;
+$btn-success-bg:							$color-success !default;
+$btn-success-border:				darken($btn-success-bg, 5%) !default;
+$btn-success-color:					#FFF !default;
+$btn-info-bg:								$color-info !default;
+$btn-info-border:						darken($btn-info-bg, 5%) !default;
+$btn-info-color:							#FFF !default;
+$btn-warning-bg:							$color-warning !default;
+$btn-warning-border:				darken($btn-warning-bg, 5%) !default;
+$btn-warning-color:					#FFF !default;
+$btn-danger-bg:							$color-danger !default;
+$btn-danger-border:					darken($btn-danger-bg, 5%) !default;
+$btn-danger-color:					#FFF !default;
+$btn-link-disabled-color:	$color-gray-light !default;
+
+// screen
+$screen-phone-small:		480px !default;
+$screen-phone:						720px !default;
+$screen-phone-large:		1080px !default;
+$screen-tablet:					960px !default;
+$screen-desktop:					1200px !default;
+$screen-large-desktop:	1440px !default;
+
+$screen-iphone:					640px !default;
+$screen-iphone4:					640px !default;
+$screen-iphone5:					640px !default;
+$screen-android_w480:		480px !default;
+$screen-android_w720:		720px !default;
+$screen-android_w800:		800px !default;
+$screen-android_w1080:	1080px !default;
+$screen-ipad:						768px !default;
+
+$screen-hidpi:						'(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)';
+
+// grid
+$grid_columns:								12 !default;
+$grid_column-width-base:		60px !default;
+$grid_gutter-base:					20px !default;
+$grid_width-base:						$grid_columns * ($grid_column-width-base + $grid_gutter-base) !default;
+$grid-breakpoint:						$screen-tablet !default;
+$grid-breakpoint-max:				($grid-breakpoint - 1) !default;
+
+// form states and alerts
+$state-success-text:		#3C763D !default;
+$state-success-bg:			#DFF0D8 !default;
+$state-success-border:	darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-info-text:				#31708F !default;
+$state-info-bg:					#D9EDF7 !default;
+$state-info-border:			darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-warning-text:		#8A6D3B !default;
+$state-warning-bg:			#FCF8E3 !default;
+$state-warning-border:	darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-danger-text:			#A94442 !default;
+$state-danger-bg:				#F2DEDE !default;
+$state-danger-border:		darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-gray-text:				#333333 !default;
+$state-gray-bg:					#EEEEEE !default;
+$state-gray-border:			darken(adjust-hue($state-gray-bg, -10), 5%) !default;
+
+// modal
+$modal-index:										2000 !default;
+$modal-min-width:								20% !default;
+$modal-width:										600px !default;
+$modal-max-width:								80% !default;
+$modal-header-height:						32px !default;
+$modal-header-bg:								#EEE !default;
+$modal-border-color:						#DCDCDC !default;
+$modal-bg:												#FFF !default;
+$modal-header-border-color:		$modal-border-color !default;
+$modal-footer-border-color:		$modal-border-color !default;
+$modal-body-padding:						10px !default;
+
+$modal-mask-index:							$modal-index - 1 !default;
+$modal-mask-bg: 									#333 !default;
+$modal-backdrop-opacity:				0 !default;
+
+// pagination
+$pagination-color:								$color-link !default;
+$pagination-bg:										#FFF !default;
+$pagination-border:								#DDD !default;
+$pagination-hover-color:					$color-link-hover !default;
+$pagination-hover-bg:							$color-gray-lighter !default;
+$pagination-hover-border:				#DDD !default;
+$pagination-active-color:				#FFF !default;
+$pagination-active-bg:						$color-primary !default;
+$pagination-active-border:				$color-primary !default;
+$pagination-disabled-color:			$color-gray-lighter !default;
+$pagination-disabled-bg:					#FFF !default;
+$pagination-disabled-border:			#DDD !default;
+
+// images
+$img-load-src: 'imgload.png';
+
+// font
+$icon-font-path:			"../font/" !default;
+$icon-font-name:			"icon_font" !default;
+$icon-font-svg-id:	"icon_font" !default;
+
+// code
+$code-color:										#C7254E !default;
+$code-bg:											#F9F2F4 !default;
+$kbd-color:										#FFF !default;
+$kbd-bg:												#333 !default;
+$pre-bg:												#F5F5F5 !default;
+$pre-color:										$color-gray-dark !default;
+$pre-border-color:						#CCC !default;
+$pre-scrollable-max-height:	340px !default;

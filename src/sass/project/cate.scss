@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.cate #scroller {
+	top:85px;
+}
+.cate-nav {
+	height: 40px;
+	border-bottom: $border-complete;
+	>ul {
+		@extend %clearfix;
+		>li {
+			float: left;
+			width: 33.3%;
+			>button {
+				display: block;
+				margin: 6px 0;
+				padding: 0 5px;
+				width: 100%;
+				height: 28px;
+				text-align: center;
+				background: transparent;
+				border: none;
+				border-right: $border-complete;
+				font-size: 16px;
+				i {
+					display: inline-block;
+					max-width: 78px;
+					padding: 3px 0;
+					height: 22px;
+					line-height: 22px;
+					font-style: normal;
+					@extend %text-overflow;
+					@include responsive(screen-android_w1080) {
+						max-width: 90%;
+					};
+				}
+				span {
+					display: inline-block;
+					vertical-align: top;
+					margin-left: 2px;
+					padding: 3px 0;
+					height: 22px;
+					line-height: 22px;
+					font-size: 14px;
+					color: #999;
+				}
+				span.show {
+					color: #333;
+					-moz-transform:scaleY(-1);
+					-webkit-transform:scaleY(-1);
+					-o-transform:scaleY(-1);
+					transform:scaleY(-1);
+					/*IE*/
+					filter:FlipV;
+				}
+			}
+		}
+		>li:last-child button {
+			border-right: none;
+		}
+	}
+}
+.cate-nav-mask {
+	z-index: 2;
+	position: absolute;
+	top: 85px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	@include opacity(60);
+}
+.cate-nav-more {
+	z-index: 2;
+	position: absolute;
+	top: 85px;
+	left: 0;
+	right: 0;
+	padding: 0 $search-top-margin * 2;
+	background: #FFF;
+	li {
+		border-bottom: $border-complete;
+		font-size: 16px;
+		button {
+			display: block;
+			padding: 10px 0;
+			height: 40px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			background-color: transparent;
+		}
+	}
+	li:last-child {
+		border-bottom: none;
+	}
+}
+.search .shop-list-some-star,
+.cate .shop-list-some-star {
+	float: none;
+}

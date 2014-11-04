@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+.stored-main#scroller-inner {
+	background-color: transparent;
+}
+.stored-info-status {
+	padding: 16px 0;
+	background: #FFF;
+	border-bottom: $border-complete;
+	@extend %clearfix;
+}
+.stored-info-status-inner {
+	position: relative;
+	margin: 0 16px;
+	padding-bottom: 16px;
+	border-bottom: $border-complete;
+}
+.stored-info-status-left {
+	margin-right: 50px;
+}
+.stored-info-status-right {
+	position: absolute;
+	top: 0;
+	right: 16px;
+	width: 50px;
+	height: 50px;
+}
+.stored-info-logo {
+	position: absolute;
+	img {
+		display: block;
+		border: $border-complete;
+	}
+}
+.stored-info-name {
+	margin-left: 86px;
+	padding-left: 10px;
+	height: 60px;
+	.stored-info-name-row1 {
+		font-size: 16px;
+		&.line {
+			padding-top: 8px;
+		}
+	}
+	.stored-info-name-row2 {
+		margin-top: 10px;
+		font-size: 14px;
+		@extend %text-overflow;
+	}
+}
+.stored-info-status-middle,
+.stored-info-status-bottom {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #979AA0;
+}
+
+.stored-anounce {
+	margin-top: 16px;
+	padding: 6px 0 16px;
+	background: #FFF;
+	border-top: $border-complete;
+	border-bottom: $border-complete;
+	@extend %clearfix;
+	h4 {
+		margin-bottom: 12px;
+		padding-bottom: 6px;
+		padding-left: 48px;
+		height: 24px;
+		line-height: 24px;
+		@include retinize(store-notice-icon, png, 23px, 23px);
+		border-bottom: $border-complete;
+		background-repeat: no-repeat;
+		background-position: 16px 0;
+		font-size: 16px;
+	}
+}
+.stored-anounce-inner {
+	padding: 0 16px;
+	font-size: 14px;
+}
+.stored-anounce-content {
+	p {
+		margin-top: 4px;
+	}
+}
+
+.stored-comment {
+	margin-top: 16px;
+	border-top: $border-complete;
+	border-bottom: $border-complete;
+	background: #FFF;
+}
+.stored-comment-head {
+	padding: 6px 16px;
+	border-bottom: $border-complete;
+}
+.stored-comment-star-head {
+	margin-top: 0;
+	line-height: 28px;
+	font-size: 20px;
+	span {
+		margin-top: -28px;
+	}
+}
+.stored-comment-num-head {
+	display: inline-block;
+	vertical-align: top;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #979AA0;
+}
+.stored-comment-list {
+	padding: 0 20px;
+	li {
+		padding: 12px 0;
+		border-bottom: $border-complete;
+		&:last-child {
+			border-bottom: none;
+		}
+		.stored-comment-star {
+			margin-top: 0;
+		}
+		.info {
+			float: right;
+			height: 16px;
+			line-height: 16px;
+			font-size: 12px;
+			span {
+				margin-left: 6px;
+				color: #979AA0;
+			}
+		}
+		.content {
+			line-height: 1.4;
+			font-size: 14px;
+		}
+	}
+}
+.shop-list-some-star {
+	float: left;
+}

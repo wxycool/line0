@@ -1,0 +1,84 @@
+<div id="scroller">
+	<section class="index-main" id="scroller-inner">
+		<!-- 幻灯片广告 -->
+		<div>
+			<div id="slider" class="swipe">
+				<div class="swipe-wrap">
+					<div ng-repeat="banner in bannerList"><a ng-href="{{banner.url | fixWxURL}}"><img ng-src="{{banner.imgUrl}}"></a></div>
+					<!--
+					<div><a href="#"><img src="images/temp-slider-01.jpg" /></a></div>
+					<div><a href="#"><img src="images/temp-slider-02.jpg" /></a></div>
+					<div><a href="#"><img src="images/temp-slider-03.jpg" /></a></div>
+					<div><a href="#"><img src="images/temp-slider-04.jpg" /></a></div>
+					<div><a href="#"><img src="images/temp-slider-05.jpg" /></a></div>
+					<div><a href="#"><img src="images/temp-slider-06.jpg" /></a></div>
+					-->
+				</div>
+			</div>
+			<nav id="slider-num">
+				<ul></ul>
+			</nav>
+		</div>
+		<!-- 分类 -->
+		<div class="cate">
+			<ul>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick1()"><img src="images/index-main-icon01-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick1">中式餐厅</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick2()"><img src="images/index-main-icon02-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick2">馄饨面食</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick3()"><img src="images/index-main-icon03-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick3">便当套餐</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick4()"><img src="images/index-main-icon04-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick4">西式餐点</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick5()"><img src="images/index-main-icon05-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick5">日韩料理</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick6()"><img src="images/index-main-icon06-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick6">下午茶</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick7()"><img src="images/index-main-icon07-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick7">休闲小吃</a></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p><a class="cate_img" ng-click="CateCidClick0()"><img src="images/index-main-icon08-2x.png" alt=""></a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick0">全部</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 推荐 -->
+		<div class="recommendation">
+			<a ui-sref="promotion"><img src="images/index-main-recommendation01.png"></a>
+		</div>
+		<div class="recommendation">
+			<a ui-sref="hot"><img src="images/index-main-recommendation02.png"></a>
+		</div>
+		<div style="height: 20px"></div>
+	</section>
+</div>

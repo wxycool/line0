@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+$tab-width: 308px;
+$tab-height: 150px;
+$tab-tit-width: 60px;
+$tab-tit-height: 40px;
+$tab-con-height: $tab-height - $tab-tit-height - 2;
+
+.tab {
+	width: $tab-width;
+	height: $tab-height;
+	overflow: hidden;
+	border: 1px solid #EEE;
+	border-top: none;
+}
+.tab-tit {
+
+}
+.tab-tit ul {
+	margin-left: -1px;
+	margin-right: -1px;
+	font-size: 0;
+}
+.tab-tit li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+
+	padding: 0 1px;
+	width: $tab-tit-width;
+	height: $tab-tit-height;
+	line-height: $tab-tit-height;
+	text-align: center;
+	overflow: hidden;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	background: #F7F7F7;
+	font-size: 14px;
+
+	-webkit-transition-property: background, border-top-color;
+	-moz-transition-property: background, border-top-color;
+	-ms-transition-property: background, border-top-color;
+	transition-property: background, border-top-color;
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease);
+	@include transition-delay(0);
+}
+.tab-tit li.cur {
+	padding: 0;
+	border-top: 1px solid #428BCA;
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #EEE;
+	border-bottom-color: #FFF;
+	background: #FFF;
+}
+.tab-tit li a,
+.tab-tit li span {
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+}
+.tab-con > div {
+	height: $tab-con-height;
+	text-align: left;
+}
+.tab-con-inner {
+	padding: 10px;
+}
