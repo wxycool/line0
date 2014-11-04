@@ -1,11 +1,1 @@
-﻿需提供图片-系统图标，启动画面
-touch-icon-57.png
-touch-icon-114.png
-touch-icon-120.png
-touch-startup-320x460.png
-touch-startup-640x920.png
-touch-startup-640x1096.png
-
-
-如何在tpl中添加JS
-requireJS
+﻿
