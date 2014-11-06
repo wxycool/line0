@@ -6,7 +6,6 @@ myCtrl.controller('HotCtrl', ['$scope', function ($scope) {
 myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 	var loadingStep = 0;
 	var pullDownEl = document.getElementById('shop-list-pullDown');
-	var thisTopPx = 0;
 
 	$scope.StateHotMain = true;
 	$scope.StateHotRefresh = true;
@@ -38,7 +37,7 @@ myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope
 		$scope.totalPage = data.response.page.pageAmount;
 		//console.log($scope.guessLikeOnes);
 
-		waterfallImgLen = data.response.guessLikeOnes.length;
+		imgLen = data.response.guessLikeOnes.length;
 	};
 
 	$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
@@ -124,7 +123,7 @@ myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope
 	};
 
 	$window.getMoreGuess = function (data) {
-		waterfallImgLen = data.response.guessLikeOnes.length;
+		imgLen = data.response.guessLikeOnes.length;
 		//console.log(data.response);
 		$scope.guessLikeOnes = $scope.guessLikeOnes.concat(data.response.guessLikeOnes);
 		//console.log($scope.guessLikeOnes.length, $scope.guessLikeOnes);

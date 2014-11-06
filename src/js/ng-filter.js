@@ -109,3 +109,14 @@ myFilter.filter('tostoreNameLen', function () {
 		}
 	}
 });
+
+myFilter.filter('wxyToPromotionPrice', function () {
+	return function(item) {
+		if(item == undefined) {
+			return;
+		}
+		if(item == -1) {
+			return 'd_n';
+		}
+	}
+});

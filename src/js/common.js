@@ -1,6 +1,7 @@
 // JavaScript Document
 "use strict";
 
+var myScrollOne;
 var myScrollIndex;
 var myScrollSearch;
 var myScrollCate;
@@ -9,8 +10,8 @@ var myScrollStoreRight;
 var myScrollStored;
 var myScrollGoods;
 var myScrollHot;
-var waterfallImgIndex = 0;
-var waterfallImgLen = 0;
+var imgIndex = 0;
+var imgLen = 0;
 
 //var cityId = 1;
 //var latitude = 32.0572355;

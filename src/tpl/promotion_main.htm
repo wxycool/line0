@@ -1,30 +1,23 @@
 <div id="scroller">
 	<section class="promotion-main" id="scroller-inner" ng-show="StatePromotionMain">
 		<ul class="promotion-store-list">
-			<li>
-				<a href="#">
+			<li ng-repeat="promotion in promotions">
+				<a href="#/store/{{promotion.shopId}}">
 					<div>
-						<img class="store-img" ng-src="http://img.line0.com/static/image/logo/20120828016.jpg" width="57" height="38" />
-						<p class="store-tit">星巴克星巴克星巴克星巴克星巴克星巴克星巴克星巴克星巴</p>
+						<img class="store-img" ng-src="{{promotion.logo}}" width="57" height="38" />
+						<p class="store-tit {{promotion.shopName | tostoreNameLine:54}}">{{promotion.shopName | tostoreNameLen:50}}</p>
 					</div>
-					<div class="store-tip"><i></i>买鸡腿套餐送可乐两瓶，活动时间：09.12-10.12，消费满100送美食一份</div>
+					<div class="store-tip"><i></i>{{promotion.promotionInfo}}</div>
 					<ul class="promotion-goods-list">
-						<li>
-							<p><img class="goods-img" ng-src="http://img.line0.com/static/shopDecorate/1409212756884.jpg" /></p>
-							<p class="goods-price"><span>￥118</span><i>￥128</i></p>
-						</li>
-						<li>
-							<p><img class="goods-img" ng-src="http://img.line0.com/static/shopDecorate/1409212852062.jpg" /></p>
-							<p class="goods-price"><span>￥118</span><i>￥128</i></p>
-						</li>
-						<li>
-							<p><img class="goods-img" ng-src="http://img.line0.com/static/shopDecorate/1409212878301.jpg" /></p>
-							<p class="goods-price"><span>￥118</span><i>￥128</i></p>
+						<li ng-repeat="product in promotion.productList" ng-if="$index < 3">
+							<p><img class="goods-img" ng-src="{{product.imageUrl}}" wxy-on-finish-render-promotion /></p>
+							<p class="goods-price"><span>￥{{product.originPrice | number}}</span><i class="{{product.promotionPrice | wxyToPromotionPrice}}">￥{{product.promotionPrice}}</i></p>
 						</li>
 					</ul>
 				</a>
 			</li>
 		</ul>
+		<div id="shop-list-pullDown" class="none">下拉准备刷新...</div>
 	</section>
 </div>
 <!-- 刷新 -->

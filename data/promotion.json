@@ -24,7 +24,7 @@ getPromotion({
                     {
                         "originPrice": "30.00",
                         "productId": "36190",
-                        "promotionPrice": "-1",
+                        "promotionPrice": "12.00",
                         "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
                         "productName": "冰摩卡"
                     },

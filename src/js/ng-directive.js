@@ -153,10 +153,10 @@ myDirective.directive('onFinishRenderFilters', function ($timeout) {
 		link: function(scope, element, attr) {
 			var ngSrc = attr.ngSrc;
 			loadImage(ngSrc, function () {
-				waterfallImgIndex++;
-				//console.log(waterfallImgIndex, waterfallImgLen,  scope.$index);
-				if(waterfallImgIndex >= waterfallImgLen) {
-					waterfallImgIndex = 0;
+				imgIndex++;
+				//console.log(imgIndex, imgLen,  scope.$index);
+				if(imgIndex >= imgLen) {
+					imgIndex = 0;
 					//console.log('onFinishRenderFiltersEnd');
 					scope.$emit('ngRepeatFinished');
 				}
@@ -165,6 +165,25 @@ myDirective.directive('onFinishRenderFilters', function ($timeout) {
 		}
 	};
 });
+
+myDirective.directive('wxyOnFinishRenderPromotion', function ($timeout) {
+	return {
+		restrict: 'AE',
+		link: function(scope, element, attr) {
+			var ngSrc = attr.ngSrc;
+			loadImage(ngSrc, function () {
+				imgIndex++;
+				//console.log(imgIndex, imgLen,  scope.$index);
+				if(imgIndex >= imgLen) {
+					imgIndex = 0;
+					//console.log('onFinishRenderFiltersEnd');
+					scope.$emit('ngRepeatFinished');
+				}
+			});
+		}
+	}
+});
+
 
 myDirective.directive('myDirective', function () {
 
