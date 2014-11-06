@@ -203,6 +203,11 @@ myCtrl.controller('IndexMainCtrl', ['$scope', '$rootScope', '$http', '$window', 
 		});
 	});
 
+	if(!cookie.get('firestLogin')) {
+		$scope.firstLogin = true;
+		cookie.set('firestLogin', 1, 24*30*365);
+	}
+
 	getLocation(getBannerListJson);
 
 	function getBannerListJson() {
@@ -304,6 +309,11 @@ myCtrl.controller('IndexMainCtrl', ['$scope', '$rootScope', '$http', '$window', 
 		$state.go('cate', $stateParams, {
 			reload: true
 		});
+	};
+
+
+	$scope.IndexFirstLogin = function () {
+		$scope.firstLogin = false;
 	};
 }]);
 myCtrl.controller('SearchCtrl', ['$scope', '$rootScope', '$http', '$window', function ($scope, $rootScope, $http, $window) {

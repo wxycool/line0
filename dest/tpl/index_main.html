@@ -25,49 +25,49 @@
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick1()"><img src="images/index-main-icon01-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick1">中式餐厅</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick1()">中式餐厅</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick2()"><img src="images/index-main-icon02-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick2">馄饨面食</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick2()">馄饨面食</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick3()"><img src="images/index-main-icon03-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick3">便当套餐</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick3()">便当套餐</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick4()"><img src="images/index-main-icon04-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick4">西式餐点</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick4()">西式餐点</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick5()"><img src="images/index-main-icon05-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick5">日韩料理</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick5()">日韩料理</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick6()"><img src="images/index-main-icon06-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick6">下午茶</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick6()">下午茶</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick7()"><img src="images/index-main-icon07-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick7">休闲小吃</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick7()">休闲小吃</a></p>
 					</div>
 				</li>
 				<li>
 					<div>
 						<p><a class="cate_img" ng-click="CateCidClick0()"><img src="images/index-main-icon08-2x.png" alt=""></a></p>
-						<p><a class="cate_txt" ng-click="CateCidClick0">全部</a></p>
+						<p><a class="cate_txt" ng-click="CateCidClick0()">全部</a></p>
 					</div>
 				</li>
 			</ul>
@@ -81,4 +81,9 @@
 		</div>
 		<div style="height: 20px"></div>
 	</section>
+</div>
+<div class="first-login-mask" ng-click="IndexFirstLogin()" ng-show="firstLogin"></div>
+<div class="first-login" ng-show="firstLogin">
+	<div>零号线触屏版目前正在内测中，暂不支持下单，敬请谅解。</div>
+	<button ng-click="IndexFirstLogin()">确定</button>
 </div>
