@@ -1,0 +1,75 @@
+getHot({
+    "response": {
+        "page": {
+            "pageAmount": 24,
+            "curPage": "15"
+        },
+        "msg": "",
+        "guessLikeOnes": [
+            {
+                "originPrice": "58.00",
+                "productId": "215140",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/guanjiapro\/1403333765875.JPG",
+                "productName": "【58元一人C套餐】"
+            },
+            {
+                "originPrice": "68.00",
+                "productId": "227251",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img6.line0.com\/static\/guanjiapro\/1414844087257.jpg",
+                "productName": "【水煮鱼片1-2人套餐】送清炒时蔬，米饭两份"
+            },
+            {
+                "originPrice": "68.00",
+                "productId": "331019",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1408328983509.jpg",
+                "productName": "【68元—毛血旺双人套餐】经济实惠超选"
+            },
+            {
+                "originPrice": "15.00",
+                "productId": "213690",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1406084714247.jpg",
+                "productName": "卤味烧鸭饭"
+            },
+            {
+                "originPrice": "28.00",
+                "productId": "213696",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1406084988162.jpg",
+                "productName": "经典烧卤三拼饭"
+            },
+            {
+                "originPrice": "20.00",
+                "productId": "315652",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1406083877807.jpg",
+                "productName": "烧鸡烧鸭饭"
+            },
+            {
+                "originPrice": "28.00",
+                "productId": "340011",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1408957329474.jpg",
+                "productName": "摸摸腹肌排骨饭"
+            },
+            {
+                "originPrice": "36.00",
+                "productId": "211723",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img.line0.com\/static\/shopDecorate\/1401081979010.jpg",
+                "productName": "【招牌半只鸭】"
+            },
+            {
+                "originPrice": "48.00",
+                "productId": "211727",
+                "promotionPrice": "-1",
+                "imageUrl": "http:\/\/img3.line0.com\/static\/guanjiapro\/1411195907800.jpg",
+                "productName": "【私房糖醋仔排】"
+            }
+        ],
+        "errorCode": 1
+    }
+})

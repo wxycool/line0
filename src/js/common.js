@@ -9,6 +9,8 @@ var myScrollStoreRight;
 var myScrollStored;
 var myScrollGoods;
 var myScrollHot;
+var waterfallImgIndex = 0;
+var waterfallImgLen = 0;
 
 //var cityId = 1;
 //var latitude = 32.0572355;
@@ -114,4 +116,31 @@ var cookie = {
 		exp.setTime(exp.getTime() + Hour*60*60*1000);
 		document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString();
 	}
+};
+
+
+/**
+ * TODO:图片预加载
+ */
+function loadImage(url, callback) {
+	var img = new Image(); //创建一个Image对象，实现图片的预下载
+	img.src = url;
+	//console.log(img);
+
+	if(img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+		callback.call(img);
+		return; // 直接返回，不用再处理onload事件
+	}
+
+	img.onload = function () { //图片下载完毕时异步调用callback函数。
+		callback.call(img);//将回调函数的this替换为Image对象
+		return; // 直接返回，不用再处理onerror事件
+	};
+
+	img.onerror = function () {
+		//img.src = 'http://img.line0.com/newimg/image/403/CCDF01005.jpg_200x.jpg';
+		callback.call(img);
+		return;
+	};
+
 };

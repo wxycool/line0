@@ -151,11 +151,17 @@ myDirective.directive('onFinishRenderFilters', function ($timeout) {
 	return {
 		restrict: 'AE',
 		link: function(scope, element, attr) {
-			if (scope.$last === true) {
-				element.load(function () {
+			var ngSrc = attr.ngSrc;
+			loadImage(ngSrc, function () {
+				waterfallImgIndex++;
+				//console.log(waterfallImgIndex, waterfallImgLen,  scope.$index);
+				if(waterfallImgIndex >= waterfallImgLen) {
+					waterfallImgIndex = 0;
+					//console.log('onFinishRenderFiltersEnd');
 					scope.$emit('ngRepeatFinished');
-				});
-			}
+				}
+			});
+			//element.load();
 		}
 	};
 });
