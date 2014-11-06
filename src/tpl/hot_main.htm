@@ -1,10 +1,19 @@
 <div id="scroller">
 	<section class="hot-main" id="scroller-inner" ng-show="StateHotMain">
-		<ul class="hot-list">
-			<li>
-
-			</li>
-		</ul>
+		<div class="waterfall">
+			<ul id="title">
+				<li class="waterfall-pin" ng-repeat="goods in guessLikeOnes">
+					<div class="waterfall-box">
+						<div><img class="waterfall-box-img" ng-src="{{goods.imageUrl}}_200x.jpg" on-finish-render-filters></div>
+						<div>
+							<p class="hot-goods-name">{{goods.productName}}</p>
+							<p class="hot-goods-price">{{goods.originPrice}}</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="shop-list-pullDown" class="none">下拉准备刷新...</div>
 	</section>
 </div>
 <!-- 刷新 -->

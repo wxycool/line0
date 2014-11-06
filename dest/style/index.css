@@ -1567,7 +1567,7 @@ sub {
 .waterfall {
   position: relative;
   margin: 0 auto;
-  /*width: 960px;*/
+  width: 100%;
 }
 
 .waterfall > ul {
@@ -1580,18 +1580,20 @@ sub {
   *display: inline;
   *zoom: 1;
   vertical-align: top;
+  position: absolute;
   width: 182px;
   border: 1px solid #ccc;
-  box-shadow: 0 0 6px #ccc;
-  border-radius: 3px;
+  /*	box-shadow: 0 0 6px #ccc;
+  	border-radius: 3px;*/
   font-size: 14px;
 }
 
 .waterfall-box {
-  padding: 10px;
+  padding: 0;
 }
 
 .waterfall-box-img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -3333,6 +3335,32 @@ img {
   font-style: normal;
   color: #979AA0;
   text-decoration: line-through;
+}
+
+.hot .spin_refresh {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44px;
+  bottom: 0;
+  background: #FFF;
+}
+
+.hot-goods-name,
+.hot-goods-price {
+  padding: 0 6px;
+  font-size: 16px;
+}
+
+.hot-goods-name {
+  margin-top: 6px;
+}
+
+.hot-goods-price {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #FF5000;
 }
 
 /*# sourceMappingURL=index.css.map */

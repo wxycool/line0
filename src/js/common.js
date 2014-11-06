@@ -8,6 +8,7 @@ var myScrollStoreLeft;
 var myScrollStoreRight;
 var myScrollStored;
 var myScrollGoods;
+var myScrollHot;
 
 //var cityId = 1;
 //var latitude = 32.0572355;

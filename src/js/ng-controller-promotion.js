@@ -10,7 +10,7 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 
 	getLocation(getPromotionJson);
 	function getPromotionJson() {
-		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion&jsonp=getPromotion';
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion?jsonp=getPromotion';
 		var param = {
 			params : {
 				userX: longitude,
@@ -25,6 +25,16 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 	$window.getPromotion = function (data) {
 		console.log(data.response);
 	}
+
 	$scope.StatePromotionMain = true;
 	$scope.StatePromotionRefresh = false;
+
+	$("img").load(function(){
+		$.getScript('lib/other/iscroll-probe.min.js',function(){
+			myScrollGoods = new IScroll('#scroller', { tap: true, preventDefault: false });
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			goods_detail = true;
+		});
+	});
+
 }]);

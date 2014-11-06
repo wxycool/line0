@@ -147,6 +147,19 @@ myDirective.directive('goodsArticleClick', function () {
 	}
 });
 
+myDirective.directive('onFinishRenderFilters', function ($timeout) {
+	return {
+		restrict: 'AE',
+		link: function(scope, element, attr) {
+			if (scope.$last === true) {
+				element.load(function () {
+					scope.$emit('ngRepeatFinished');
+				});
+			}
+		}
+	};
+});
+
 myDirective.directive('myDirective', function () {
 
 });

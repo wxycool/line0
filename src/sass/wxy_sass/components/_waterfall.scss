@@ -3,7 +3,7 @@
 .waterfall {
 	position: relative;
 	margin: 0 auto;
-	/*width: 960px;*/
+	width: 100%;
 }
 .waterfall > ul {
 	vertical-align: top;
@@ -15,16 +15,18 @@
 	*zoom: 1;
 	vertical-align: top;
 
+	position: absolute;
 	width: 182px;
 	border:1px solid #ccc;
-	box-shadow: 0 0 6px #ccc;
-	border-radius: 3px;
+/*	box-shadow: 0 0 6px #ccc;
+	border-radius: 3px;*/
 	font-size: 14px;
 }
 .waterfall-box {
-	padding: 10px;
+	padding: 0;
 }
 .waterfall-box-img {
+	display: block;
 	width:100%;
 	height:auto;
 }

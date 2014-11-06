@@ -1,1 +1,24 @@
 @charset "utf-8";
+
+.hot .spin_refresh {
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 44px;
+	bottom: 0;
+	background: #FFF;
+}
+.hot-goods-name,
+.hot-goods-price {
+	padding: 0 6px;
+	font-size: 16px;
+}
+.hot-goods-name {
+	margin-top: 6px;
+}
+.hot-goods-price {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	color: #FF5000;
+}

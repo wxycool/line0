@@ -999,7 +999,7 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 
 	getLocation(getPromotionJson);
 	function getPromotionJson() {
-		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion&jsonp=getPromotion';
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion?jsonp=getPromotion';
 		var param = {
 			params : {
 				userX: longitude,
@@ -1014,8 +1014,18 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 	$window.getPromotion = function (data) {
 		console.log(data.response);
 	}
+
 	$scope.StatePromotionMain = true;
 	$scope.StatePromotionRefresh = false;
+
+	$("img").load(function(){
+		$.getScript('lib/other/iscroll-probe.min.js',function(){
+			myScrollGoods = new IScroll('#scroller', { tap: true, preventDefault: false });
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			goods_detail = true;
+		});
+	});
+
 }]);
 myCtrl.controller('HotCtrl', ['$scope', function ($scope) {
 	$scope.pageClass="hot";
@@ -1023,13 +1033,20 @@ myCtrl.controller('HotCtrl', ['$scope', function ($scope) {
 }]);
 
 myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
+	var loadingStep = 0;
+	var pullDownEl = document.getElementById('shop-list-pullDown');
+	var thisTopPx = 0;
 
-	$scope.StateHotMain = false;
+	$scope.StateHotMain = true;
 	$scope.StateHotRefresh = true;
+	$.getScript('lib/other/iscroll-probe.min.js',function(){
+		myScrollHot = new IScroll('#scroller', { tap: true, preventDefault: false, probeType: 2 });
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	});
 
-	//getLocation(getHotJson);
+	getLocation(getHotJson);
 	function getHotJson() {
-		var url = 'http://handset.line0.com/ws/handset/v3/mcms/guess/guess&jsonp=getHot';
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/guess?jsonp=getHot';
 		var param = {
 			params : {
 				userX: longitude,
@@ -1041,12 +1058,105 @@ myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope
 		};
 		$http.jsonp(url, param).success();
 	}
-	$window.getHot = function (data) {
-		console.log(data.response);
-	}
 
-	$scope.StateHotMain = true;
-	$scope.StateHotRefresh = false;
+	$window.getHot = function (data) {
+		//console.log(data.response);
+		$scope.guessLikeOnes = data.response.guessLikeOnes;
+		$scope.curPage = data.response.page.curPage;
+		$scope.totalPage = data.response.page.pageAmount;
+		//console.log($scope.guessLikeOnes);
+	};
+
+	$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
+		$('img').load(function () {
+			$.getScript('lib/jquery/jq-waterfall.min.js',function(){
+				var handler = $('.waterfall').find('li');
+				handler.wookmark({
+					 container     : $('.waterfall'),			// 该元素的 width 将被用于计算列的数量, 默认是 "window"
+					 direction     : "left",								// 方向: "left" or "right", 从左->右或从右->左
+					 itemWidth     : '48%',									// 单元项的宽度
+					 flexibleWidth : '48%',								// 单元项的宽度自适应
+					 fillEmptySpace : false,
+					 outerOffset   : 10,
+					 offset         : 10	,											// 单元项的间距
+					 onLayoutChanged : function () {
+						 $(".spin_refresh").hide();
+						 $.getScript('lib/other/iscroll-probe.min.js',function(){
+							 pullDownEl.className = '';
+							 pullDownEl.innerHTML = '下拉准备刷新...';
+							 loadingStep = 0;
+							 myScrollHot.refresh();
+							 // 加载更多数据----绑定滚动事件
+							 myScrollHot.on('scroll', function () {
+								 //console.log(this.y, (this.maxScrollY - 5));
+								 if(loadingStep == 0 && !pullDownEl.className.match('show|loading')) {
+									 if (this.y > 5) {
+										 //上拉准备刷新效果
+										 //console.log('up');
+										 //loadingStep = 1;
+									 } else if (this.y < (this.maxScrollY - 5)) {
+										 //下拉准备刷新效果
+										 //console.log('down');
+										 pullDownEl.className = 'show';
+										 myScrollHot.refresh();
+										 loadingStep = 1;
+									 }
+								 }
+							 });
+							 myScrollHot.on('scrollEnd',function(){
+								 if(loadingStep == 1){
+									 if(pullDownEl.className.match('show|loading')){
+										 pullDownEl.className = 'loading';
+										 pullDownEl.innerHTML = '<i class="icon-spin animate-spin"></i>';
+										 loadingStep = 2;
+										 getMoreGuessJson();
+									 }
+								 }
+							 });
+						 });
+					 }
+				 });
+			});
+		});
+		//console.log('ngRepeatFinishedEvent');
+	});
+
+	//加载更多数据-----定义
+	function getMoreGuessJson() {
+		$scope.curPage = parseInt($scope.curPage) + 1;
+		//console.log($scope.curPage, $scope.totalPage);
+
+		// 判断是否显示加载更多数据
+		if($scope.curPage > $scope.totalPage) {
+			pullDownEl.className = 'show';
+			pullDownEl.innerHTML = '没有更多数据了';
+			myScrollHot.refresh();
+			loadingStep = 0;
+			return;
+		}
+
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/guess?jsonp=getMoreGuess';
+		var param = {
+			params : {
+				userX: longitude,
+				userY: latitude,
+				cityId: cityId,
+				toPage: $scope.curPage,
+				pageRows: 10
+			}
+		};
+		$http.jsonp(url, param).success();
+	};
+
+	$window.getMoreGuess = function (data) {
+		//console.log(data.response);
+		$scope.guessLikeOnes = $scope.guessLikeOnes.concat(data.response.guessLikeOnes);
+		//console.log($scope.guessLikeOnes.length, $scope.guessLikeOnes);
+
+		//$(".spin_refresh").show();
+	};
+
+
 }]);
 var myDirective = angular.module('myDirective', []);
 
@@ -1195,6 +1305,19 @@ myDirective.directive('goodsArticleClick', function () {
 			});
 		}
 	}
+});
+
+myDirective.directive('onFinishRenderFilters', function ($timeout) {
+	return {
+		restrict: 'AE',
+		link: function(scope, element, attr) {
+			if (scope.$last === true) {
+				element.load(function () {
+					scope.$emit('ngRepeatFinished');
+				});
+			}
+		}
+	};
 });
 
 myDirective.directive('myDirective', function () {
