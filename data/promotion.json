@@ -1,0 +1,224 @@
+getPromotion({
+    "response": {
+        "page": {
+            "pageAmount": 11,
+            "curPage": "1"
+        },
+        "msg": "",
+        "shopList": [
+            {
+                "saleAmount": "5821",
+                "promotionInfo": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
+                "avgAppPoint": "4.8067",
+                "pointX": "118.79215",
+                "logoUrl": "http:\/\/img.line0.com\/static\/\/image\/logo\/20120828016.jpg",
+                "pointY": "32.03069",
+                "shopAnounce": "因购买商品时排队等待时间过长，故制作时间改为30分钟，请顾客点餐时注意。",
+                "shopAreaId": "18",
+                "merchantId": "0",
+                "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/20120828016.jpg",
+                "flag": 14,
+                "shopType": "1",
+                "shortMsg": "星巴克烘焙的颜色可以模仿，但它独特的风味是无法模仿的",
+                "productList": [
+                    {
+                        "originPrice": "30.00",
+                        "productId": "36190",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "冰摩卡"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "36179",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "摩卡星冰乐"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "36171",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "冰香草拿铁"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "36170",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "抹茶星冰乐"
+                    }
+                ],
+                "shopLogo": "http:\/\/img.line0.com\/static\/\/image\/logo\/20120828016.jpg",
+                "favourite": "null",
+                "deliveryFee": "15",
+                "systemShopType": [
+                    {
+                        "level": "2",
+                        "showOrder": "1",
+                        "shopTypeName": "饮品",
+                        "shopTypeShowName": "饮品",
+                        "systemShopTypeId": "10",
+                        "isDeleted": "0",
+                        "typeCode": "003001",
+                        "parentId": "3"
+                    },
+                    {
+                        
+                    }
+                ],
+                "avgSales": "5.37",
+                "commentsAmount": "326",
+                "isShow": "1",
+                "deliveryMethods": [
+                    {
+                        "deliveryMaxDistance": "6000",
+                        "deliveryFee": "15",
+                        "deliveryMethodType": 1,
+                        "beginMoney": "0",
+                        "deliveryPhone": "4001141890",
+                        "deliveryMethodId": "1"
+                    }
+                ],
+                "avgCost": "35.00",
+                "collectedNum": "65",
+                "deliveryPhone": "4001141890",
+                "deliveryMethodId": "1",
+                "deliveryMethodType": 1,
+                "isAnounceShow": "1",
+                "deliveryMaxDistance": 6000,
+                "hasPromotion": 0,
+                "isCollected": 0,
+                "isInBusiness": "1",
+                "promotionMark": "0",
+                "salesInWeek": 50,
+                "freePost": 0,
+                "marketCircleId": "101",
+                "busiArea": "null",
+                "busiTimeBin": "000000000000000000001111111111111111111100000000",
+                "distance": "5614.0",
+                "deliveryBeginMoney": "0",
+                "mainBusiness": "1",
+                "remark": "咖啡——这个在地球上交易量仅次于石油的第二大交易品从来就未曾缺少过关注。如今，在星巴克的特别烘焙与调制方法下把咖啡的醇香与浓厚发挥到了极致，正于全球范围内掀起一股‘星风暴’。 星巴克咖啡烘焙与别种咖啡的不同之处，不仅仅体现在它独特的颜色上，更多地体现在我们为使每一颗咖啡豆具有最佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它独特的风味却是无法模仿的。",
+                "shopName": "星巴克代购(水游城店)",
+                "shopId": 303,
+                "preparedTime": "30",
+                "address": "水游城F1-T06",
+                "shopStatus": 1,
+                "deliveryTime": 90,
+                "busiTime": "10:00-20:00",
+                "cityId": 1,
+                "promotionTitle": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
+                "shopTel": "82233938"
+            },
+            {
+                "saleAmount": "10401",
+                "promotionInfo": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
+                "avgAppPoint": "4.91",
+                "pointX": "118.7907835",
+                "logoUrl": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
+                "pointY": "32.04534",
+                "shopAnounce": "代购类商家制作时间较长，故配送时间会延迟半小时，请亲们点餐时注意。\r\n",
+                "shopAreaId": "38",
+                "merchantId": "0",
+                "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
+                "flag": 19,
+                "shopType": "1",
+                "shortMsg": "星巴克烘焙的颜色可以模仿，但它独特的风味是无法模仿的",
+                "productList": [
+                    {
+                        "originPrice": "30.00",
+                        "productId": "33204",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "冰摩卡"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "28628",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "热摩卡"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "33184",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "抹茶星冰乐"
+                    },
+                    {
+                        "originPrice": "30.00",
+                        "productId": "33185",
+                        "promotionPrice": "-1",
+                        "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
+                        "productName": "冰香草拿铁"
+                    }
+                ],
+                "shopLogo": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
+                "favourite": "null",
+                "deliveryFee": "10",
+                "systemShopType": [
+                    {
+                        "level": "2",
+                        "showOrder": "1",
+                        "shopTypeName": "饮品",
+                        "shopTypeShowName": "饮品",
+                        "systemShopTypeId": "10",
+                        "isDeleted": "0",
+                        "typeCode": "003001",
+                        "parentId": "3"
+                    },
+                    {
+                        
+                    }
+                ],
+                "avgSales": "7.00",
+                "commentsAmount": "414",
+                "isShow": "1",
+                "deliveryMethods": [
+                    {
+                        "deliveryMaxDistance": "6000",
+                        "deliveryFee": "10",
+                        "deliveryMethodType": 1,
+                        "beginMoney": "0",
+                        "deliveryPhone": "4001141890",
+                        "deliveryMethodId": "1"
+                    }
+                ],
+                "avgCost": "35.00",
+                "collectedNum": "59",
+                "deliveryPhone": "4001141890",
+                "deliveryMethodId": "1",
+                "deliveryMethodType": 1,
+                "isAnounceShow": "1",
+                "deliveryMaxDistance": 6000,
+                "hasPromotion": 0,
+                "isCollected": 0,
+                "isInBusiness": "1",
+                "promotionMark": "0",
+                "salesInWeek": 96,
+                "freePost": 0,
+                "marketCircleId": "131",
+                "busiArea": "null",
+                "busiTimeBin": "000000000000000000001111111111111111111111100000",
+                "distance": "3252.0",
+                "deliveryBeginMoney": "0",
+                "mainBusiness": "1",
+                "remark": "咖啡——这个在地球上交易量仅次于石油的第二大交易品从来就未曾缺少过关注。如今，在星巴克的特别烘焙与调制方法下把咖啡的醇香与浓厚发挥到了极致，正于全球范围内掀起一股‘星风暴’。 星巴克咖啡烘焙与别种咖啡的不同之处，不仅仅体现在它独特的颜色上，更多地体现在我们为使每一颗咖啡豆具有最佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它独特的风味却是无法模仿的。",
+                "shopName": "星巴克代购(国金店)",
+                "shopId": 9,
+                "preparedTime": "30",
+                "address": "国际金融中心2楼",
+                "shopStatus": 1,
+                "deliveryTime": 75,
+                "busiTime": "10:00-21:30",
+                "cityId": 1,
+                "promotionTitle": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
+                "shopTel": "52335673"
+            }
+        ],
+        "errorCode": 1
+    }
+})
