@@ -1006,7 +1006,7 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 				userY: latitude,
 				cityId: cityId,
 				toPage: 1,
-				pageRows: 100
+				pageRows: 10
 			}
 		};
 		$http.jsonp(url, param).success();
@@ -1061,7 +1061,7 @@ myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope
 	}
 
 	$window.getHot = function (data) {
-		//console.log(data.response);
+		console.log(data.response);
 		$scope.guessLikeOnes = data.response.guessLikeOnes;
 		$scope.curPage = data.response.page.curPage;
 		$scope.totalPage = data.response.page.pageAmount;

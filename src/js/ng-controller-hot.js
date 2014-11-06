@@ -32,7 +32,7 @@ myCtrl.controller('HotMainCtrl', ['$scope', '$http', '$window', function ($scope
 	}
 
 	$window.getHot = function (data) {
-		//console.log(data.response);
+		console.log(data.response);
 		$scope.guessLikeOnes = data.response.guessLikeOnes;
 		$scope.curPage = data.response.page.curPage;
 		$scope.totalPage = data.response.page.pageAmount;

@@ -17,7 +17,7 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 				userY: latitude,
 				cityId: cityId,
 				toPage: 1,
-				pageRows: 100
+				pageRows: 10
 			}
 		};
 		$http.jsonp(url, param).success();

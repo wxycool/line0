@@ -4,11 +4,13 @@
 			<ul id="title">
 				<li class="waterfall-pin" ng-repeat="goods in guessLikeOnes">
 					<div class="waterfall-box">
-						<div><img class="waterfall-box-img" ng-src="{{goods.imageUrl}}_200x.jpg" on-finish-render-filters></div>
-						<div>
-							<p class="hot-goods-name">{{goods.productName}}</p>
-							<p class="hot-goods-price">¥{{goods.originPrice}}</p>
-						</div>
+						<a ng-href="#/goods/{{goods.productId}}">
+							<div><img class="waterfall-box-img" ng-src="{{goods.imageUrl}}_200x.jpg" on-finish-render-filters></div>
+							<div>
+								<p class="hot-goods-name">{{goods.productName}}</p>
+								<p class="hot-goods-price">¥{{goods.originPrice}}</p>
+							</div>
+						</a>
 					</div>
 				</li>
 			</ul>
