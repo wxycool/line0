@@ -14,7 +14,7 @@ myCtrl.controller('SearchMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 
 	//初始化页面数据——定义
 	function getShopListJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/search/shop?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=100&keyword='+ $rootScope.shopName;
+		var url = 'http://handset.line0.com/ws/handset/v3/search/shop?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=100&keyword='+ $rootScope.shopName;
 		//var url = '../data/shopList.json?jsonp=getShopListByName';
 		$http.jsonp(url).success();
 	};
@@ -84,7 +84,7 @@ myCtrl.controller('SearchMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 			return;
 		}
 
-		var url = 'http://handset.line0.com/ws/handset/v2/search/shop?jsonp=getMoreShopByPage&cityId=1&userX=118.793527&userY=32.013613&toPage=' + $scope.curPage + '&pageRows=100&keyword=' + $rootScope.shopName;
+		var url = 'http://handset.line0.com/ws/handset/v3/search/shop?jsonp=getMoreShopByPage&cityId=1&userX=118.793527&userY=32.013613&toPage=' + $scope.curPage + '&pageRows=100&keyword=' + $rootScope.shopName;
 		//var url = '../data/shopList.json?jsonp=getMoreShopByPage';
 		$http.jsonp(url).success();
 

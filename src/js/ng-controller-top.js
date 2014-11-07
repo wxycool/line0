@@ -2,7 +2,7 @@ var myCtrl = angular.module('myCtrl', []);
 
 /*
  $scope.pageClass="index";
- $http.jsonp('http://192.168.1.199/ws/handset/v2/map/cityList?jsonp=mzhan').success(function (data){
+ $http.jsonp('http://192.168.1.199/ws/handset/v3/map/cityList?jsonp=mzhan').success(function (data){
  mzhan(data);
  });
  $window.mzhan = function (data) {

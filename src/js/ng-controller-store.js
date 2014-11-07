@@ -14,7 +14,7 @@ myCtrl.controller('StoreCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 	//初始化页面数据——定义
 	function getStoreJson() {
 		//var url = '/data/shopDetail.json?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $rootScope.storeId;
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -52,7 +52,7 @@ myCtrl.controller('StoreCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 		for(var i = 0; i < $scope.cate.length; i++) {
 			//console.log($scope.cate[i].typeId);
 			if($scope.cate[i].typeId !== '0000') {
-				var url = 'http://handset.line0.com/ws/handset/v2/shop/productList?jsonp=getStoreCate&clientFlag=line0123456789abcdef987opqxyzline0&shopId=' + $rootScope.storeId + '&shopProdTypeId=' + $scope.cate[i].typeId;
+				var url = 'http://handset.line0.com/ws/handset/v3/shop/productList?jsonp=getStoreCate&clientFlag=line0123456789abcdef987opqxyzline0&shopId=' + $rootScope.storeId + '&shopProdTypeId=' + $scope.cate[i].typeId;
 				//console.log(url);
 				$http.jsonp(url).success();
 			}

@@ -152,7 +152,7 @@ var myCtrl = angular.module('myCtrl', []);
 
 /*
  $scope.pageClass="index";
- $http.jsonp('http://192.168.1.199/ws/handset/v2/map/cityList?jsonp=mzhan').success(function (data){
+ $http.jsonp('http://192.168.1.199/ws/handset/v3/map/cityList?jsonp=mzhan').success(function (data){
  mzhan(data);
  });
  $window.mzhan = function (data) {
@@ -212,13 +212,13 @@ myCtrl.controller('IndexMainCtrl', ['$scope', '$rootScope', '$http', '$window', 
 
 	function getBannerListJson() {
 		//var url = '../data/shopList.json?jsonp=getShopListByName';
-		var url = 'http://handset.line0.com/ws/handset/v2/mcms/bannerList?jsonp=getBannerList&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&areaId=null&userX=' + longitude + '&userY=' + latitude;
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/bannerList?jsonp=getBannerList&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&areaId=null&userX=' + longitude + '&userY=' + latitude;
 		$http.jsonp(url).success();
 	};
 	$window.getBannerList = function (data) {
 		//console.log(data);
 		$scope.bannerList = data.response.bannerList;
-		console.log($scope.bannerList);
+		//console.log($scope.bannerList);
 		$scope.banner();
 	};
 
@@ -332,7 +332,7 @@ myCtrl.controller('SearchMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 
 	//初始化页面数据——定义
 	function getShopListJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/search/shop?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=100&keyword='+ $rootScope.shopName;
+		var url = 'http://handset.line0.com/ws/handset/v3/search/shop?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=100&keyword='+ $rootScope.shopName;
 		//var url = '../data/shopList.json?jsonp=getShopListByName';
 		$http.jsonp(url).success();
 	};
@@ -402,7 +402,7 @@ myCtrl.controller('SearchMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 			return;
 		}
 
-		var url = 'http://handset.line0.com/ws/handset/v2/search/shop?jsonp=getMoreShopByPage&cityId=1&userX=118.793527&userY=32.013613&toPage=' + $scope.curPage + '&pageRows=100&keyword=' + $rootScope.shopName;
+		var url = 'http://handset.line0.com/ws/handset/v3/search/shop?jsonp=getMoreShopByPage&cityId=1&userX=118.793527&userY=32.013613&toPage=' + $scope.curPage + '&pageRows=100&keyword=' + $rootScope.shopName;
 		//var url = '../data/shopList.json?jsonp=getMoreShopByPage';
 		$http.jsonp(url).success();
 
@@ -592,7 +592,7 @@ myCtrl.controller('CateMainCtrl', ['$scope', '$rootScope', '$http', '$window', f
 
 	//初始化页面数据——定义
 	function getShopListJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopList?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopList?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -662,7 +662,7 @@ myCtrl.controller('CateMainCtrl', ['$scope', '$rootScope', '$http', '$window', f
 			return;
 		}
 
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopList?jsonp=getMoreShopByPage&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=' + $scope.curPage + '&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopList?jsonp=getMoreShopByPage&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=' + $scope.curPage + '&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
 		$http.jsonp(url).success();
 
 	};
@@ -706,7 +706,7 @@ myCtrl.controller('StoreCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 	//初始化页面数据——定义
 	function getStoreJson() {
 		//var url = '/data/shopDetail.json?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $rootScope.storeId;
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -744,7 +744,7 @@ myCtrl.controller('StoreCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 		for(var i = 0; i < $scope.cate.length; i++) {
 			//console.log($scope.cate[i].typeId);
 			if($scope.cate[i].typeId !== '0000') {
-				var url = 'http://handset.line0.com/ws/handset/v2/shop/productList?jsonp=getStoreCate&clientFlag=line0123456789abcdef987opqxyzline0&shopId=' + $rootScope.storeId + '&shopProdTypeId=' + $scope.cate[i].typeId;
+				var url = 'http://handset.line0.com/ws/handset/v3/shop/productList?jsonp=getStoreCate&clientFlag=line0123456789abcdef987opqxyzline0&shopId=' + $rootScope.storeId + '&shopProdTypeId=' + $scope.cate[i].typeId;
 				//console.log(url);
 				$http.jsonp(url).success();
 			}
@@ -831,8 +831,8 @@ myCtrl.controller('StoredMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 		//http://handset.line0.com
 		//http://192.168.1.199
 		//var url = '/data/shopDetail.json?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
-		//var url = 'http://192.168.1.199/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid + '&version=17';
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
+		//var url = 'http://192.168.1.199/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid + '&version=17';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -863,7 +863,7 @@ myCtrl.controller('StoredMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 
 
 	function getStoreCommentJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/appraise/selectListByShopId?jsonp=getStoreComment&toPage=1&pageRows=200&shopId=' + $stateParams.sid;
+		var url = 'http://handset.line0.com/ws/handset/v3/appraise/selectListByShopId?jsonp=getStoreComment&toPage=1&pageRows=200&shopId=' + $stateParams.sid;
 		$http.jsonp(url).success();
 	};
 
@@ -908,7 +908,7 @@ myCtrl.controller('GoodsCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 	}
 	function getGoodsJson() {
 		//var url = '/data/goods.json?jsonp=getGoods&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&productId=' + $stateParams.gid;
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/productdetail?jsonp=getGoods&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&productId=' + $stateParams.gid;
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/productdetail?jsonp=getGoods&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&productId=' + $stateParams.gid;
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -939,7 +939,7 @@ myCtrl.controller('GoodsCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 	// 用户评论
 	$scope.GoodsCommentCtrl = function () {
 		if(goods_comment == false) {
-			var url = 'http://handset.line0.com/ws/handset/v2/shop/productappraises?jsonp=getGoodsComment&pageNum=1&pageRow=200&productId=' + $stateParams.gid;
+			var url = 'http://handset.line0.com/ws/handset/v3/shop/productappraises?jsonp=getGoodsComment&pageNum=1&pageRow=200&productId=' + $stateParams.gid;
 			//console.log(url);
 			$http.jsonp(url).success();
 			$window.getGoodsComment = function (data) {
@@ -969,7 +969,7 @@ myCtrl.controller('GoodsCtrl', ['$scope', '$rootScope', '$http', '$window', '$st
 	// 图文详情
 	$scope.GoodsArticleCtrl = function () {
 		if(goods_article == false) {
-			var url = 'http://handset.line0.com/ws/handset/v2/shop/productdetailpicture?jsonp=getGoodsHTML';
+			var url = 'http://handset.line0.com/ws/handset/v3/shop/productdetailpicture?jsonp=getGoodsHTML';
 			//console.log(url);
 			$http.jsonp(url, {params: {productId: $stateParams.gid}}).success();
 			$window.getGoodsHTML = function (data) {

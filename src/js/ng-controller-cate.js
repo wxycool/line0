@@ -157,7 +157,7 @@ myCtrl.controller('CateMainCtrl', ['$scope', '$rootScope', '$http', '$window', f
 
 	//初始化页面数据——定义
 	function getShopListJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopList?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopList?jsonp=getShopList&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=1&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -227,7 +227,7 @@ myCtrl.controller('CateMainCtrl', ['$scope', '$rootScope', '$http', '$window', f
 			return;
 		}
 
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopList?jsonp=getMoreShopByPage&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=' + $scope.curPage + '&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopList?jsonp=getMoreShopByPage&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&toPage=' + $scope.curPage + '&pageRows=20&shopType=' + $rootScope.cid + '&distance=' + $rootScope.distance + '&sort=' + $rootScope.sort + '';
 		$http.jsonp(url).success();
 
 	};

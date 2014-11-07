@@ -23,8 +23,8 @@ myCtrl.controller('StoredMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 		//http://handset.line0.com
 		//http://192.168.1.199
 		//var url = '/data/shopDetail.json?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
-		//var url = 'http://192.168.1.199/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid + '&version=17';
-		var url = 'http://handset.line0.com/ws/handset/v2/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
+		//var url = 'http://192.168.1.199/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid + '&version=17';
+		var url = 'http://handset.line0.com/ws/handset/v3/shop/shopDetail?jsonp=getStore&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&userX=' + longitude + '&userY=' + latitude + '&shopId=' + $stateParams.sid;
 		//console.log(url);
 		$http.jsonp(url).success();
 	};
@@ -55,7 +55,7 @@ myCtrl.controller('StoredMainCtrl', ['$scope', '$rootScope', '$http', '$window',
 
 
 	function getStoreCommentJson() {
-		var url = 'http://handset.line0.com/ws/handset/v2/appraise/selectListByShopId?jsonp=getStoreComment&toPage=1&pageRows=200&shopId=' + $stateParams.sid;
+		var url = 'http://handset.line0.com/ws/handset/v3/appraise/selectListByShopId?jsonp=getStoreComment&toPage=1&pageRows=200&shopId=' + $stateParams.sid;
 		$http.jsonp(url).success();
 	};
 

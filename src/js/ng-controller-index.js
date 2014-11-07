@@ -20,13 +20,13 @@ myCtrl.controller('IndexMainCtrl', ['$scope', '$rootScope', '$http', '$window', 
 
 	function getBannerListJson() {
 		//var url = '../data/shopList.json?jsonp=getShopListByName';
-		var url = 'http://handset.line0.com/ws/handset/v2/mcms/bannerList?jsonp=getBannerList&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&areaId=null&userX=' + longitude + '&userY=' + latitude;
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/bannerList?jsonp=getBannerList&clientFlag=line0123456789abcdef987opqxyzline0&cityId=' + cityId + '&areaId=null&userX=' + longitude + '&userY=' + latitude;
 		$http.jsonp(url).success();
 	};
 	$window.getBannerList = function (data) {
 		//console.log(data);
 		$scope.bannerList = data.response.bannerList;
-		console.log($scope.bannerList);
+		//console.log($scope.bannerList);
 		$scope.banner();
 	};
 
