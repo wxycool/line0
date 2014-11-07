@@ -39,7 +39,7 @@ myCtrl.controller('IndexMainCtrl', ['$scope', '$rootScope', '$http', '$window', 
 			var div_ele = $('.swipe-wrap').find('div');
 			var div_len = div_ele.length;
 			if(div_len >= 2) {
-				for (var i = 0; i < div_len; i++){
+				for (var i = 0; i < div_len; i++) {
 					btn_ele += '<li></li>';
 				}
 				$('#slider-num ul').append(btn_ele);
