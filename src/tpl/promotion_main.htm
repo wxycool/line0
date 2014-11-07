@@ -10,7 +10,7 @@
 					<div class="store-tip"><i></i>{{promotion.promotionInfo}}</div>
 					<ul class="promotion-goods-list">
 						<li ng-repeat="product in promotion.productList" ng-if="$index < 3">
-							<p><img class="goods-img" ng-src="{{product.imageUrl}}" wxy-on-finish-render-promotion /></p>
+							<p><img class="goods-img" ng-src="{{product.imageUrl | wxyToImgSrcNoimage}}" wxy-on-finish-render-promotion  /></p>
 							<p class="goods-price"><span>￥{{product.originPrice | number}}</span><i class="{{product.promotionPrice | wxyToPromotionPrice}}">￥{{product.promotionPrice}}</i></p>
 						</li>
 					</ul>

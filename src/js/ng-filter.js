@@ -120,3 +120,14 @@ myFilter.filter('wxyToPromotionPrice', function () {
 		}
 	}
 });
+
+myFilter.filter('wxyToImgSrcNoimage', function () {
+	return function(item) {
+		console.log(item);
+		if(item == 'http://img.line0.com/static/noimage.jpg') {
+			return item;
+		} else {
+			return item + '_200x.jpg';
+		}
+	}
+});

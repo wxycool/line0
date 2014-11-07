@@ -27,16 +27,27 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 	}
 	$window.getPromotion = function (data) {
 		//console.log(data.response);
-		$scope.promotions = data.response.shopList;
-		$scope.curPage = data.response.page.curPage;
-		$scope.totalPage = data.response.page.pageAmount;
-		//console.log($scope.promotions);
 
-		imgLen = data.response.shopList.length * 3;
+		if(data.response.size == 0) {
+			getPromotionJson();
+		} else {
+			imgLen = 0;
+			for(var i = 0;  i< data.response.shopList.length; i++) {
+				if(data.response.shopList[i].productList.length > 3) {
+					imgLen = imgLen + 3;
+				} else {
+					imgLen = imgLen + data.response.shopList[i].productList.length;
+				}
+			}
 
-		$scope.StatePromotionMain = true;
-		$scope.StatePromotionRefresh = false;
+			$scope.promotions = data.response.shopList;
+			$scope.curPage = data.response.page.curPage;
+			$scope.totalPage = data.response.page.pageAmount;
+			//console.log($scope.promotions);
 
+			$scope.StatePromotionMain = true;
+			$scope.StatePromotionRefresh = false;
+		}
 	};
 
 	$.getScript('lib/other/iscroll-probe.min.js',function() {
@@ -44,6 +55,55 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	});
 
+	//加载更多数据-----定义
+	function getMorePromotionJson() {
+		$scope.curPage = parseInt($scope.curPage) + 1;
+		//console.log($scope.curPage, $scope.totalPage);
+
+		// 判断是否显示加载更多数据
+		if($scope.curPage > $scope.totalPage) {
+			pullDownEl.className = 'show';
+			pullDownEl.innerHTML = '没有更多数据了';
+			myScrollHot.refresh();
+			loadingStep = 0;
+			return;
+		}
+
+		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion?jsonp=getMorePromotion';
+		var param = {
+			params : {
+				userX: longitude,
+				userY: latitude,
+				cityId: cityId,
+				toPage: $scope.curPage,
+				pageRows: 10
+			}
+		};
+		$http.jsonp(url, param).success();
+	};
+
+	$window.getMorePromotion = function (data) {
+		//console.log(data.response);
+
+		if(data.response.size == 0) {
+			getMorePromotionJson();
+		} else {
+			imgLen = 0;
+			for(var i = 0;  i< data.response.shopList.length; i++) {
+				if(data.response.shopList[i].productList.length > 3) {
+					imgLen = imgLen + 3;
+				} else {
+					imgLen = imgLen + data.response.shopList[i].productList.length;
+				}
+			}
+			//console.log(imgLen);
+
+			$scope.promotions = $scope.promotions.concat(data.response.shopList);
+			//console.log($scope.promotions.length, $scope.promotions);
+		}
+	};
+
+	/* 监听完成传播事件 */
 	$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
 		//console.log('start');
 		$.getScript('lib/other/iscroll-probe.min.js',function() {
@@ -81,39 +141,5 @@ myCtrl.controller('PromotionMainCtrl', ['$scope', '$http', '$window', function (
 			});
 		});
 	});
-
-	//加载更多数据-----定义
-	function getMorePromotionJson() {
-		$scope.curPage = parseInt($scope.curPage) + 1;
-		//console.log($scope.curPage, $scope.totalPage);
-
-		// 判断是否显示加载更多数据
-		if($scope.curPage > $scope.totalPage) {
-			pullDownEl.className = 'show';
-			pullDownEl.innerHTML = '没有更多数据了';
-			myScrollHot.refresh();
-			loadingStep = 0;
-			return;
-		}
-
-		var url = 'http://handset.line0.com/ws/handset/v3/mcms/promotion?jsonp=getMorePromotion';
-		var param = {
-			params : {
-				userX: longitude,
-				userY: latitude,
-				cityId: cityId,
-				toPage: $scope.curPage,
-				pageRows: 10
-			}
-		};
-		$http.jsonp(url, param).success();
-	};
-
-	$window.getMorePromotion = function (data) {
-		imgLen = data.response.shopList.length * 3;
-		//console.log(data.response);
-		$scope.promotions = $scope.promotions.concat(data.response.shopList);
-		//console.log($scope.promotions.length, $scope.promotions);
-	};
 
 }]);
