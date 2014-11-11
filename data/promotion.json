@@ -1,13 +1,14 @@
 getPromotion({
     "response": {
         "page": {
-            "pageAmount": 11,
+            "pageAmount": 14,
             "curPage": "1"
         },
         "msg": "",
+        "size": 2,
         "shopList": [
             {
-                "saleAmount": "5821",
+                "saleAmount": "5876",
                 "promotionInfo": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
                 "avgAppPoint": "4.8067",
                 "pointX": "118.79215",
@@ -17,14 +18,14 @@ getPromotion({
                 "shopAreaId": "18",
                 "merchantId": "0",
                 "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/20120828016.jpg",
-                "flag": 14,
+                "flag": 17,
                 "shopType": "1",
                 "shortMsg": "星巴克烘焙的颜色可以模仿，但它独特的风味是无法模仿的",
                 "productList": [
                     {
                         "originPrice": "30.00",
                         "productId": "36190",
-                        "promotionPrice": "12.00",
+                        "promotionPrice": "-1",
                         "imageUrl": "http:\/\/img.line0.com\/static\/noimage.jpg",
                         "productName": "冰摩卡"
                     },
@@ -52,7 +53,7 @@ getPromotion({
                 ],
                 "shopLogo": "http:\/\/img.line0.com\/static\/\/image\/logo\/20120828016.jpg",
                 "favourite": "null",
-                "deliveryFee": "15",
+                "deliveryFee": "10",
                 "systemShopType": [
                     {
                         "level": "2",
@@ -74,7 +75,7 @@ getPromotion({
                 "deliveryMethods": [
                     {
                         "deliveryMaxDistance": "6000",
-                        "deliveryFee": "15",
+                        "deliveryFee": "10",
                         "deliveryMethodType": 1,
                         "beginMoney": "0",
                         "deliveryPhone": "4001141890",
@@ -92,12 +93,12 @@ getPromotion({
                 "isCollected": 0,
                 "isInBusiness": "1",
                 "promotionMark": "0",
-                "salesInWeek": 50,
+                "salesInWeek": 46,
                 "freePost": 0,
                 "marketCircleId": "101",
                 "busiArea": "null",
                 "busiTimeBin": "000000000000000000001111111111111111111100000000",
-                "distance": "5614.0",
+                "distance": "4464.0",
                 "deliveryBeginMoney": "0",
                 "mainBusiness": "1",
                 "remark": "咖啡——这个在地球上交易量仅次于石油的第二大交易品从来就未曾缺少过关注。如今，在星巴克的特别烘焙与调制方法下把咖啡的醇香与浓厚发挥到了极致，正于全球范围内掀起一股‘星风暴’。 星巴克咖啡烘焙与别种咖啡的不同之处，不仅仅体现在它独特的颜色上，更多地体现在我们为使每一颗咖啡豆具有最佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它独特的风味却是无法模仿的。",
@@ -106,16 +107,16 @@ getPromotion({
                 "preparedTime": "30",
                 "address": "水游城F1-T06",
                 "shopStatus": 1,
-                "deliveryTime": 90,
+                "deliveryTime": 75,
                 "busiTime": "10:00-20:00",
                 "cityId": 1,
                 "promotionTitle": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
                 "shopTel": "82233938"
             },
             {
-                "saleAmount": "10401",
+                "saleAmount": "10525",
                 "promotionInfo": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",
-                "avgAppPoint": "4.91",
+                "avgAppPoint": "4.58",
                 "pointX": "118.7907835",
                 "logoUrl": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
                 "pointY": "32.04534",
@@ -123,7 +124,7 @@ getPromotion({
                 "shopAreaId": "38",
                 "merchantId": "0",
                 "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
-                "flag": 19,
+                "flag": 24,
                 "shopType": "1",
                 "shortMsg": "星巴克烘焙的颜色可以模仿，但它独特的风味是无法模仿的",
                 "productList": [
@@ -158,7 +159,7 @@ getPromotion({
                 ],
                 "shopLogo": "http:\/\/img.line0.com\/static\/\/image\/logo\/2012052225.jpg",
                 "favourite": "null",
-                "deliveryFee": "10",
+                "deliveryFee": "6",
                 "systemShopType": [
                     {
                         "level": "2",
@@ -175,12 +176,12 @@ getPromotion({
                     }
                 ],
                 "avgSales": "7.00",
-                "commentsAmount": "414",
+                "commentsAmount": "416",
                 "isShow": "1",
                 "deliveryMethods": [
                     {
                         "deliveryMaxDistance": "6000",
-                        "deliveryFee": "10",
+                        "deliveryFee": "6",
                         "deliveryMethodType": 1,
                         "beginMoney": "0",
                         "deliveryPhone": "4001141890",
@@ -188,7 +189,7 @@ getPromotion({
                     }
                 ],
                 "avgCost": "35.00",
-                "collectedNum": "59",
+                "collectedNum": "60",
                 "deliveryPhone": "4001141890",
                 "deliveryMethodId": "1",
                 "deliveryMethodType": 1,
@@ -198,12 +199,12 @@ getPromotion({
                 "isCollected": 0,
                 "isInBusiness": "1",
                 "promotionMark": "0",
-                "salesInWeek": 96,
+                "salesInWeek": 110,
                 "freePost": 0,
                 "marketCircleId": "131",
                 "busiArea": "null",
                 "busiTimeBin": "000000000000000000001111111111111111111111100000",
-                "distance": "3252.0",
+                "distance": "2138.0",
                 "deliveryBeginMoney": "0",
                 "mainBusiness": "1",
                 "remark": "咖啡——这个在地球上交易量仅次于石油的第二大交易品从来就未曾缺少过关注。如今，在星巴克的特别烘焙与调制方法下把咖啡的醇香与浓厚发挥到了极致，正于全球范围内掀起一股‘星风暴’。 星巴克咖啡烘焙与别种咖啡的不同之处，不仅仅体现在它独特的颜色上，更多地体现在我们为使每一颗咖啡豆具有最佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它独特的风味却是无法模仿的。",
@@ -212,7 +213,7 @@ getPromotion({
                 "preparedTime": "30",
                 "address": "国际金融中心2楼",
                 "shopStatus": 1,
-                "deliveryTime": 75,
+                "deliveryTime": 60,
                 "busiTime": "10:00-21:30",
                 "cityId": 1,
                 "promotionTitle": "友情提醒：零号线不参加商家的店内活动，只参加零号线网上公布的活动",

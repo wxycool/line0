@@ -2,73 +2,71 @@ getGoods({
     "response": {
         "msg": "",
         "product": {
-            "collectedNum": 0,
-            "imageUrl": "http://img6.line0.com/static/guanjiapro/1413559722584.jpg",
-            "sales": "3",
-            "productDesc": "",
-            "shopProdTypeId": "27228",
+            "collectedNum": "4",
+            "imageUrl": "http:\/\/img.line0.com\/static\/image\/496\/LTGJFGJFL0001.jpg",
+            "sales": "541",
+            "article": "",
+            "shopProdTypeId": "10389",
             "priceDownAttr": {
-                "price": "7.00",
+                "price": "15.00",
                 "dictOne": null,
-                "stock": "999999",
-                "dictTwo": {
-                    "dictId": "2422",
-                    "dictValue": "原味",
-                    "dictName": "风味"
-                },
+                "stock": "99999",
+                "dictTwo": null,
                 "promotionStartDate": null,
-                "productId": "371967",
+                "productId": "55242",
                 "promotionEndDate": null,
                 "extIsCuxiao": 0,
-                "productAttrId": "1317696",
+                "productAttrId": "84084",
                 "promotionPrice": 0,
-                "integral": 0,
-                "inPrice": 0,
-                "packCost": "0.00"
+                "integral": "16",
+                "inPrice": "0.00",
+                "packCost": "1.00"
             },
-            "sysProdTypeId": "0",
+            "sysProdTypeId": "1111",
             "attrList": [
                 {
-                    "price": "7.00",
+                    "price": "15.00",
                     "dictOne": null,
-                    "stock": "999999",
-                    "dictTwo": {
-                        "dictId": "2422",
-                        "dictValue": "原味",
-                        "dictName": "风味"
-                    },
+                    "stock": "99999",
+                    "dictTwo": null,
                     "promotionStartDate": null,
-                    "productId": "371967",
+                    "productId": "55242",
                     "promotionEndDate": null,
                     "extIsCuxiao": 0,
-                    "productAttrId": "1317696",
+                    "productAttrId": "84084",
                     "promotionPrice": 0,
-                    "integral": 0,
-                    "inPrice": 0,
-                    "packCost": "0.00"
+                    "integral": "16",
+                    "inPrice": "0.00",
+                    "packCost": "1.00"
                 }
             ],
-            "productCode": "000ull8YAGWZMTKJPH",
-            "productName": "原味鸡蛋仔",
-            "shopId": "2346",
+            "productCode": "000ullHV1LXS0JBAAJ",
+            "productName": "老头盖浇饭（招牌饭）",
+            "shopId": "496",
             "shop": {
-                "saleAmount": "1934",
+                "saleAmount": "26926",
                 "promotionInfo": "",
-                "avgAppPoint": "4.9412",
-                "pointX": "118.793924",
-                "logoUrl": "http://img.line0.com/static//image/logo/1405477221902.jpg",
-                "pointY": "32.025394",
+                "avgAppPoint": "4.7562",
+                "pointX": "118.780199",
+                "logoUrl": "http:\/\/img.line0.com\/static\/\/image\/logo\/1359910281767.jpg",
+                "pointY": "32.077977",
                 "shopAnounce": "",
-                "commentsAmount": "34",
+                "shopAreaId": "23",
                 "merchantId": "0",
-                "logo": "http://img.line0.com/static//image/logo/1405477221902.jpg",
-                "flag": 26,
+                "logo": "http:\/\/img.line0.com\/static\/\/image\/logo\/1359910281767.jpg",
+                "flag": 28,
                 "shopType": "0",
-                "shortMsg": "潼关小吃 传承经典",
+                "shortMsg": "老头盖浇饭是一家主要经营盖浇饭的快餐连锁店。",
+                "activityList": {
+                    "shopId": 496,
+                    "giftsList": [
+                        {
+                            
+                        }
+                    ]
+                },
                 "favourite": "null",
-                "cutPost": 6,
-                "avgSales": 0,
-                "isShow": "1",
+                "deliveryFee": "6",
                 "systemShopType": [
                     {
                         "level": "2",
@@ -80,55 +78,73 @@ getGoods({
                         "typeCode": "001001",
                         "parentId": "1"
                     },
-                    {}
+                    {
+                        "level": "2",
+                        "showOrder": "2",
+                        "shopTypeName": "饭食套餐",
+                        "shopTypeShowName": "饭食套餐",
+                        "systemShopTypeId": "6",
+                        "isDeleted": "0",
+                        "typeCode": "001002",
+                        "parentId": "1"
+                    },
+                    {
+                        
+                    },
+                    {
+                        
+                    }
                 ],
-                "avgCost": "15.00",
-                "collectedNum": "21",
+                "avgSales": "15.57",
+                "commentsAmount": "1049",
+                "isShow": "1",
                 "deliveryMethods": [
                     {
                         "deliveryMaxDistance": "6000",
                         "deliveryFee": "6",
                         "deliveryMethodType": 1,
-                        "beginMoney": "25",
+                        "beginMoney": "0",
                         "deliveryPhone": "4001141890",
                         "deliveryMethodId": "1"
                     }
                 ],
-                "deliveryFee": "6",
+                "avgCost": "15.00",
+                "collectedNum": "86",
                 "deliveryPhone": "4001141890",
-                "isAnounceShow": "0",
-                "deliveryMaxDistance": 6000,
                 "deliveryMethodId": "1",
-                "freePost": 0,
-                "isInBusiness": "1",
                 "deliveryMethodType": 1,
-                "promotionMark": "0",
-                "salesInWeek": 134,
-                "marketCircleId": "132",
+                "isAnounceShow": "1",
+                "deliveryMaxDistance": 6000,
+                "hasPromotion": 0,
+                "isCollected": 0,
+                "isInBusiness": "1",
+                "promotionMark": "2",
+                "salesInWeek": 157,
+                "freePost": 0,
+                "marketCircleId": "130",
                 "busiArea": "null",
-                "busiTimeBin": "000000000000000000001111111111111111111111000000",
-                "distance": "1572.8",
-                "deliveryBeginMoney": "25",
+                "busiTimeBin": "000000000000000000001111111111111111111110000000",
+                "distance": "2781.1",
+                "deliveryBeginMoney": "0",
                 "mainBusiness": "1",
-                "remark": "潼关肉夹馍--皮薄松脆，掉渣烫口，肉质细腻，肥而不腻，瘦而不柴，咸香可口，口味深长…被确定为陕西省非物质文化遗产，欢迎订餐品尝！！",
-                "shopTel": "13915946935/13057509905",
-                "shopId": 2346,
+                "remark": "老头盖浇饭是一家主要经营盖浇饭的快餐连锁店，提供各类荤素盖浇饭系列、炒饭、普通快餐、套餐系列等，可算是南京盖浇饭中的翘楚了。\r\n",
+                "shopName": "老头盖浇饭(马台街店)",
+                "shopId": 496,
                 "preparedTime": "15",
-                "address": "南京市瞻园路苏果超市",
+                "address": "马台街70号",
                 "shopStatus": 1,
                 "deliveryTime": 60,
-                "busiTime": "10:00-21:00",
-                "shopName": "潼关肉夹馍(夫子庙店)",
+                "busiTime": "10:00-20:30",
+                "cityId": 1,
                 "promotionTitle": "",
-                "isCollected": 0
+                "shopTel": "83373721\/13913915878\/18013347467"
             },
-            "isDeleted": "0",
-            "priceDown": 7,
-            "priceRange": 7,
+            "priceDown": 15,
+            "priceRange": 15,
             "state": "3",
-            "article": "",
-            "isVirtual": "0",
-            "productId": "371967"
+            "isDeleted": "0",
+            "productDesc": "",
+            "productId": "55242"
         },
         "errorCode": 1
     }
